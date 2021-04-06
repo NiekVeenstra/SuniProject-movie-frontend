@@ -64,7 +64,13 @@ const Burger = () => {
         </li>
         <li>
           {" "}
-          <Link className="link" to="/">
+          <Link className="link" to="/discover">
+            Discover
+          </Link>
+        </li>
+        <li>
+          {" "}
+          <Link className="link" to="/movies">
             Movies
           </Link>
         </li>
