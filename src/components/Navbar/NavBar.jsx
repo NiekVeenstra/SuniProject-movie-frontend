@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Burger from "./Burger";
+import Burger from "./Menu";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
