@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 // components
 
@@ -7,9 +8,11 @@ import Home from "./pages/HomePage";
 
 const App = () => {
   return (
-    <div>
-      <Home />
-    </div>
+    <Router>
+      <div>
+        <Home />
+      </div>
+    </Router>
   );
 };
 
