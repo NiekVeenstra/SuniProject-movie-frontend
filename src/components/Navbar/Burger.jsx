@@ -29,12 +29,12 @@ const Burger = () => {
             Home
           </Link>
         </li>
-        <li className="menu-container__li">
+        {/* <li className="menu-container__li">
           {" "}
           <Link className="menu-container__link" to="/discover">
             Discover
           </Link>
-        </li>
+        </li> */}
         <li className="menu-container__li">
           {" "}
           <Link className="menu-container__link" to="/movies">
