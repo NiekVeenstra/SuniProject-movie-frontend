@@ -10,13 +10,9 @@ const Ul = styled.ul`
   li {
     padding: 18px 10px;
     .link {
-      color: #000000;
+      color: white;
       font-size: 2rem;
       text-decoration: none;
-      .img {
-        border: solid red 1px;
-        width: 2.5rem;
-      }
     }
   }
   @media (max-width: 768px) {
@@ -61,11 +57,6 @@ const RightNav = ({ open }) => {
       {!!currentUser && (
         <li>
           <Link className="link" to="/settings">
-            {/* <img
-            className="img"
-            src="https://i.postimg.cc/W1CLyW31/account-avatar-face-man-people-profile-user-icon-123197.png"
-            alt=""
-          /> */}
             Settings
           </Link>
         </li>

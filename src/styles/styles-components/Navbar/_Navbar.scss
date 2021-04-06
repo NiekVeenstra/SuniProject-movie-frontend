@@ -1,53 +1,80 @@
 .navbar {
-    width: 100%;
-    height: 55px;
-    border-bottom: 2px solid #f1f1f1;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    &__logo {
-      color: black;
-      padding: 15px 0;
-      text-decoration: none;
-      font-family: "Share Tech Mono", monospace;
-      font-size: 2.5rem;
+  width: 100%;
+  height: 55px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.746), transparent);
+  &__logo {
+    color: rgb(241, 11, 11);
+    padding: 15px 0;
+    text-decoration: none;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 2.5rem;
+  }
+  &__burger {
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 20;
+    display: none;
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: space-around;
+      flex-flow: column nowrap;
     }
-    &__burger {
+    .line {
       width: 2rem;
-      height: 2rem;
-      position: fixed;
-      top: 15px;
-      right: 20px;
-      z-index: 20;
-      display: none;
-      @media (max-width: 768px) {
-        display: flex;
-        justify-content: space-around;
-        flex-flow: column nowrap;
+      height: 0.25rem;
+      border-radius: 10px;
+      transform-origin: 1px;
+      transition: all 0.3s linear;
+      background-color: $overal-text-color;
+    }
+    .nav-open {
+      width: 2rem;
+      height: 0.25rem;
+      border-radius: 10px;
+      background-color: $overal-text-color;
+      &:nth-child(1) {
+        transform: rotate(45deg) translateY(9px);
       }
-      .line {
-        width: 2rem;
-        height: 0.25rem;
-        border-radius: 10px;
-        transform-origin: 1px;
-        transition: all 0.3s linear;
-        background-color: rgb(0, 0, 0);
+      &:nth-child(2) {
+        transform: translateX(100%);
+        opacity: 0;
       }
-      .nav-open {
-        width: 2rem;
-        height: 0.25rem;
-        border-radius: 10px;
-        background-color: #ccc;
-        &:nth-child(1) {
-          transform: rotate(45deg) translateY(9px);
-        }
-        &:nth-child(2) {
-          transform: translateX(100%);
-          opacity: 0;
-        }
-        &:nth-child(3) {
-          transform: rotate(-45deg) translateY(-9px);
-        }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translateY(-9px);
       }
     }
   }
+  .menu-container {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    &__li{
+      padding: 1rem 1rem;
+    }
+    &__link{
+      color: $overal-text-color;
+      font-size: 2rem;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      flex-flow: column nowrap;
+      align-items: center;
+      background-color: $overal-background-color;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 100vw;
+      padding-top: 3.5rem;
+      transition: transform 0.5s ease-in-out;
+    }
+  }
+}
