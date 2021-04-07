@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Burger from "./Menu";
+import NavMenu from "./Menu";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -20,7 +20,7 @@ const Navbar = () => {
       <Link to="/" className="navbar__logo" id="logo">
         SUNIFLIX
       </Link>
-      <Burger />
+      <NavMenu />
     </div>
   );
 };
