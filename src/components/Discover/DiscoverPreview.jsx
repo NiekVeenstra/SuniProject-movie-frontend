@@ -14,6 +14,12 @@ const DiscoverPreview = () => {
         loop="true"
         url="https://www.youtube.com/embed/TgB7rMuxY-s"
       ></ReactPlayer>
+      <button>
+        <img
+          src="https://i.postimg.cc/MKKfY7Xg/3643734-high-sound-speaker-voice-volume-113403.png"
+          alt="turn sound on/off"
+        />
+      </button>
     </div>
   );
 };

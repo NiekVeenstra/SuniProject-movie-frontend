@@ -2,16 +2,29 @@
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 0;
-//   margin-top: -30px;
   height: 0;
   overflow: hidden;
   width: 100%;
-  z-index: -1;
+  border: solid rgb(145, 255, 0) 1px;
   &__player {
+    z-index: -1;
     position: absolute;
-    // margin-top: -27px;
     top: -6%;
-    // left: 0;
-    // margin-bottom: -27px;
+  }
+  button {
+    //   background: transparent;
+    //   background: yellow;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 
+    cursor: pointer;
+    outline: none;
+    img {
+      z-index: 3;
+      width: 100%;
+    }
   }
 }
