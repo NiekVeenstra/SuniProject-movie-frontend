@@ -6,7 +6,8 @@
         "_variables.scss",
         "_global-style.scss",
         "styles-components/Navbar/_Navbar.scss",
-        "styles-pages/_home-page.scss"
+        "styles-pages/_home-page.scss",
+        "styles-components/Footer/_Footer.scss"
     ],
     "names": [],
     "file": "styles.css"
