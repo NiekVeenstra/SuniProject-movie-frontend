@@ -2,16 +2,52 @@
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 0;
-//   margin-top: -30px;
   height: 0;
   overflow: hidden;
   width: 100%;
-  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &__player {
+    z-index: -1;
     position: absolute;
-    // margin-top: -27px;
     top: -6%;
-    // left: 0;
-    // margin-bottom: -27px;
+  }
+  .backdrop-img {
+    padding-top:55%; 
+    width: 100%;
+  }
+  button {
+    // background: transparent;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 13%;
+    left: 1%;
+    z-index: 10;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .sound-img {
+      z-index: 3;
+      width: auto;
+      height: 100%;
+      width: 100%;
+    }
+    .sound-img-on {
+      background: url("https://i.postimg.cc/MKKfY7Xg/3643734-high-sound-speaker-voice-volume-113403.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .sound-img-off {
+      background: url("https://i.postimg.cc/nhXsyn4k/3643732-mute-sound-speaker-voice-volume-113439.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }
