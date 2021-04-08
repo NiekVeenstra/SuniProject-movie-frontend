@@ -165,12 +165,26 @@ body {
   height: 0;
   overflow: hidden;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .preview__player {
   z-index: -1;
   position: absolute;
   top: -6%;
+}
+
+.preview .backdrop-img {
+  padding-top: 55%;
+  width: 100%;
 }
 
 .preview button {
