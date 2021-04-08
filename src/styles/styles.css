@@ -174,8 +174,8 @@ body {
 }
 
 .preview button {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   position: absolute;
   bottom: 13%;
@@ -183,10 +183,35 @@ body {
   z-index: 10;
   cursor: pointer;
   outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.preview button img {
+.preview button .sound-img {
   z-index: 3;
+  width: auto;
+  height: 100%;
   width: 100%;
+}
+
+.preview button .sound-img-on {
+  background: url("https://i.postimg.cc/MKKfY7Xg/3643734-high-sound-speaker-voice-volume-113403.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.preview button .sound-img-off {
+  background: url("https://i.postimg.cc/nhXsyn4k/3643732-mute-sound-speaker-voice-volume-113439.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /*# sourceMappingURL=styles.css.map */

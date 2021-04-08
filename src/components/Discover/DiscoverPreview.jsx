@@ -1,24 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactPlayer from "react-player/youtube";
 
 const DiscoverPreview = () => {
+  const [mute, setMute] = useState(true);
+  const MovieName = "test";
+  const MovieDescription = "test test test test test test test test test";
+
   return (
     <div className="preview">
       <ReactPlayer
         className="preview__player"
         width="100%"
         height="100%"
-        playing="true"
-        muted="true"
-        controls="false"
-        loop="true"
+        playing={true}
+        muted={mute}
+        controls={false}
+        loop={true}
         url="https://www.youtube.com/embed/TgB7rMuxY-s"
       ></ReactPlayer>
-      <button>
-        <img
-          src="https://i.postimg.cc/MKKfY7Xg/3643734-high-sound-speaker-voice-volume-113403.png"
-          alt="turn sound on/off"
-        />
+      <div>
+        <h1>{MovieName}</h1>
+        <p>{MovieDescription}</p>
+      </div>
+      <button onClick={() => setMute(!mute)}>
+        <div className={mute ? "sound-img-on sound-img" : "sound-img-off sound-img"} />
       </button>
     </div>
   );
