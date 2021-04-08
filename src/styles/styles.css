@@ -178,7 +178,9 @@ body {
   height: 3rem;
   border-radius: 50%;
   position: absolute;
-  top: 80%;
+  bottom: 13%;
+  left: 1%;
+  z-index: 10;
   cursor: pointer;
   outline: none;
 }
