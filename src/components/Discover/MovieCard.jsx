@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const MovieCard = () => {
-    return (
-        <div>
-            <h1>{MovieName}</h1>
-            <p>{MovieDescription}</p>
-        </div>
-    )
-}
+const MovieCard = ({ videoInfo }) => {
+  return (
+    <div className="movie-card">
+      <h1>{videoInfo.title}</h1>
+      <p>{videoInfo.title}</p>
+    </div>
+  );
+};
 
-export default MovieCard
+export default MovieCard;

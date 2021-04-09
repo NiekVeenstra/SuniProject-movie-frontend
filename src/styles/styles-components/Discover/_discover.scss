@@ -7,7 +7,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   &__player {
     z-index: -1;
     position: absolute;
@@ -16,6 +16,7 @@
   .backdrop-img {
     padding-top:55%; 
     width: 100%;
+    z-index: -1;
   }
   button {
     // background: transparent;
@@ -49,5 +50,9 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+  }
+  .movie-card{
+    border: red 1px solid;
+    z-index: 12;
   }
 }

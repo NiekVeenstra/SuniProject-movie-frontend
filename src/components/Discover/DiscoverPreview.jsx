@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import ReactPlayer from "react-player/youtube";
 import moviedb from "../../apis/theMovieDB";
+import MovieCard from "./MovieCard";
 
 const DiscoverPreview = () => {
   const [mute, setMute] = useState(true);
   const MovieName = "test";
   const MovieDescription = "test test test test test test test test test";
   const [backdrop, setBackdrop] = useState({});
+  const [videoInfo, setVideoInfo] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
   // useEffect(() => {
@@ -33,8 +35,9 @@ const DiscoverPreview = () => {
       console.log(movie.data.results[0]);
 
       setBackdrop(movie.data.results[0].backdrop_path);
+      setVideoInfo(movie.data.results[0]);
       setTimeout(() => {
-        setIsLoading(false);
+        // setIsLoading(false);
       }, 3000);
     };
 
@@ -45,7 +48,12 @@ const DiscoverPreview = () => {
     if (isLoading) {
       return (
         <div className="preview">
-          <img className="backdrop-img" src={`https://image.tmdb.org/t/p/original/${backdrop}`} alt=""/>
+          <img
+            className="backdrop-img"
+            src={`https://image.tmdb.org/t/p/original/${backdrop}`}
+            alt=""
+          />
+          <MovieCard videoInfo={videoInfo}/>
         </div>
       );
     }
@@ -61,10 +69,7 @@ const DiscoverPreview = () => {
           loop={true}
           url="https://www.youtube.com/embed/odM92ap8_c0"
         ></ReactPlayer>
-        <div>
-          <h1>{MovieName}</h1>
-          <p>{MovieDescription}</p>
-        </div>
+        <MovieCard videoInfo={videoInfo}/>
         <button onClick={() => setMute(!mute)}>
           <div className={mute ? "sound-img-on sound-img" : "sound-img-off sound-img"} />
         </button>
