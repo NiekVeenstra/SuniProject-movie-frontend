@@ -32,12 +32,12 @@ const DiscoverPreview = () => {
       const [movie] = await Promise.all([
         moviedb.get(`/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`),
       ]);
-      console.log(movie.data.results[0]);
+      console.log(movie.data.results);
 
       setBackdrop(movie.data.results[0].backdrop_path);
       setVideoInfo(movie.data.results[0]);
       setTimeout(() => {
-        // setIsLoading(false);
+        setIsLoading(false);
       }, 3000);
     };
 
@@ -49,7 +49,7 @@ const DiscoverPreview = () => {
       return (
         <div className="preview">
           <img
-            className="backdrop-img"
+            className="preview__backdrop-img"
             src={`https://image.tmdb.org/t/p/original/${backdrop}`}
             alt=""
           />
@@ -70,7 +70,7 @@ const DiscoverPreview = () => {
           url="https://www.youtube.com/embed/odM92ap8_c0"
         ></ReactPlayer>
         <MovieCard videoInfo={videoInfo}/>
-        <button onClick={() => setMute(!mute)}>
+        <button className="preview__button-sound" onClick={() => setMute(!mute)}>
           <div className={mute ? "sound-img-on sound-img" : "sound-img-off sound-img"} />
         </button>
       </div>

@@ -29,6 +29,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 5;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.746)), to(transparent));
   background: linear-gradient(rgba(0, 0, 0, 0.746), transparent);
 }
@@ -171,6 +172,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%, black));
+  background-image: linear-gradient(transparent, black 90%);
 }
 
 .preview__player {
@@ -179,20 +182,20 @@ body {
   top: -6%;
 }
 
-.preview .backdrop-img {
+.preview__backdrop-img {
   padding-top: 55%;
   width: 100%;
   z-index: -1;
 }
 
-.preview button {
+.preview__button-sound {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
   position: absolute;
-  bottom: 13%;
+  bottom: 20%;
   left: 1%;
-  z-index: 10;
+  z-index: 4;
   cursor: pointer;
   outline: none;
   display: -webkit-box;
@@ -206,29 +209,65 @@ body {
           justify-content: center;
 }
 
-.preview button .sound-img {
+.preview__button-sound .sound-img {
   z-index: 3;
   width: auto;
   height: 100%;
   width: 100%;
 }
 
-.preview button .sound-img-on {
+.preview__button-sound .sound-img-on {
   background: url("https://i.postimg.cc/MKKfY7Xg/3643734-high-sound-speaker-voice-volume-113403.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.preview button .sound-img-off {
+.preview__button-sound .sound-img-off {
   background: url("https://i.postimg.cc/nhXsyn4k/3643732-mute-sound-speaker-voice-volume-113439.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.preview .movie-card {
-  border: red 1px solid;
-  z-index: 12;
+.movie-card {
+  z-index: 2;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 25rem;
+  height: 16rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.movie-card__title {
+  font-size: 2.5rem;
+}
+
+.movie-card__description {
+  font-size: 1.3rem;
+}
+
+.movie-card__play-movie, .movie-card__more-details {
+  padding: 0.2rem 1rem;
+  margin: 0 1rem 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.459);
+}
+
+.movie-card__play-movie:hover, .movie-card__more-details:hover {
+  background-color: rgba(97, 97, 97, 0.267);
 }
 /*# sourceMappingURL=styles.css.map */
