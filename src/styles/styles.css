@@ -160,7 +160,7 @@ body {
 }
 
 .home-page {
-  height: 200vh;
+  height: 100%;
 }
 
 .main-footer {
@@ -373,6 +373,5 @@ body {
   height: 100%;
   top: 0;
   max-height: 100vh;
-
 }
 /*# sourceMappingURL=styles.css.map */
