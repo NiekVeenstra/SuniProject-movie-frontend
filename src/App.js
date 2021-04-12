@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-
+import {withRouter} from "react-router"
 
 // components
 import Navbar from "./components/Navbar/NavBar";
@@ -9,17 +9,16 @@ import PlayVideo from "./components/Discover/PlayVideo";
 // pages
 import HomePage from "./pages/HomePage";
 
-
-const App = () => {
+const App = withRouter(({location}) => {
   return (
-    <Router>
-      <Navbar/>
-      <div>
-        <Route exact path="/" component={HomePage}/>
-        <Route exact path="/watch" component={PlayVideo}/>
-      </div>
-    </Router>
+    <div>
+      {
+        location.pathname != "/watch" && <Navbar />
+      }
+      <Route exact path="/" component={HomePage} />
+      <Route exact path="/watch" component={PlayVideo} />
+    </div>
   );
-};
+});
 
 export default App;

@@ -277,6 +277,16 @@ body {
 }
 
 .play-video {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.play-video__container {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 0;
@@ -294,6 +304,9 @@ body {
 .play-video__player {
   z-index: -1;
   position: absolute;
-  top: -6%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  max-height: 100vh;
 }
 /*# sourceMappingURL=styles.css.map */
