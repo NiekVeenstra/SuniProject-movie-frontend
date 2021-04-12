@@ -6,6 +6,7 @@
   justify-content: space-between;
   position: fixed;
   align-items: center;
+  z-index: 5;
   background: linear-gradient(rgba(0, 0, 0, 0.746), transparent);
   &__logo {
     color: rgb(168, 34, 34);
