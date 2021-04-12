@@ -36,7 +36,7 @@ const Footer = () => {
                         <Link className="link" to=""><li>Cookievoorkeuren</li></Link>
                         </ul>
                     </div>
-                   {/* Column4 */}
+                   {/* Column4/ */}
                    <div className="col1">
                         <ul className="list-unstyled">
                         <Link className="link" to=""><li>Cadeaubonnen</li></Link>
