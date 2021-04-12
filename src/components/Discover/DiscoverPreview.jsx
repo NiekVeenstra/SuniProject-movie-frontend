@@ -5,26 +5,9 @@ import MovieCard from "./MovieCard";
 
 const DiscoverPreview = () => {
   const [mute, setMute] = useState(true);
-  const MovieName = "test";
-  const MovieDescription = "test test test test test test test test test";
   const [backdrop, setBackdrop] = useState({});
   const [videoInfo, setVideoInfo] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       // `https://api.themoviedb.org/3/movie/550?api_key=${process.env.REACT_MOVIE_API_KEY}`
-  //       // `
-  //       // https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_MOVIE_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`
-  //       `https://api.themoviedb.org/3/trending/all/week?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US`
-  //     )
-  //     .then((res) => {
-  //       // console.log(res.data);
-  //       console.log(res);
-  //     })
-  //     .catch((err) => console.log(err));
-  // }, []);
 
   useEffect(() => {
     const fetchData = async () => {
