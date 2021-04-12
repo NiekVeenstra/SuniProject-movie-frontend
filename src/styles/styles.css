@@ -222,4 +222,19 @@ body {
   margin-bottom: -4px;
   margin-left: -4px;
 }
+
+.preview {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  z-index: -1;
+}
+
+.preview__player {
+  position: absolute;
+  top: -6%;
+}
 /*# sourceMappingURL=styles.css.map */

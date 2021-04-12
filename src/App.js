@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer';
 
 // components
 import Navbar from "./components/Navbar/NavBar";
+import BlankPage from "./pages/BlankPage";
 
 // pages
 import HomePage from "./pages/HomePage";
@@ -16,6 +17,7 @@ const App = () => {
           <Navbar/>
           <div>
             <Route exact path="/" component={HomePage}/>
+            <Route exact path="/blank" component={BlankPage}/>
           </div>
           <Footer />
         </Router>
