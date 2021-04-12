@@ -5,6 +5,7 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <DiscoverPreview />
+      <div className="box"></div>
     </div>
   );
 };
