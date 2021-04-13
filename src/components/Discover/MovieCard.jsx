@@ -8,7 +8,7 @@ const MovieCard = ({ videoInfo }) => {
       <p className="movie-card__description">{videoInfo.overview}</p>
       <div>
           <Link to="/watch" className="movie-card__play-movie">play</Link>
-          <Link className="movie-card__more-details">more info</Link>
+          <button className="movie-card__more-details" >more info</button>
       </div>
     </div>
   );
