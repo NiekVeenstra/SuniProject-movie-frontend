@@ -7,6 +7,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-image: linear-gradient(transparent, rgb(0, 0, 0) 90%);
   &__player {
     z-index: -1;
@@ -108,4 +109,55 @@
     top: 0;
     max-height: 100vh;
   }
+}
+
+.videoPreview {
+  // height: 50%;
+  border: 1px solid orange;
+  display: flex;
+  align-items: center;
+  &__container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 0;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__player {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    max-height: 100vh;
+  }
+}
+.videoPreviewText{
+  // height: 50%;
+  border: 1px solid blue;
+}
+
+
+
+
+.movieInfo{
+  position: absolute;
+
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  color: blue;
+  width: 70%;
+  max-width: 100rem;
+  height: 80rem;
+  margin-top: 50%;
+
+
+}
+.movieInfo-hide{
+  display: none;
 }
