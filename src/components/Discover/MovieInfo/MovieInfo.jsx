@@ -3,7 +3,7 @@ import VideoPreview from './VideoPreview'
 import VideoPreviewText from './VideoPreviewText'
 
 const MovieInfo = () => {
-    const [display, setDisplay] = useState(true)
+    const [display, setDisplay] = useState(false)
     return (
         <div className={display ? "movieInfo" : "movieInfo-hide"}>
             <VideoPreview />

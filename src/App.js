@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { withRouter } from "react-router";
 import Footer from "./components/Footer/Footer";
 
@@ -13,11 +13,11 @@ import HomePage from "./pages/HomePage";
 const App = withRouter(({ location }) => {
   return (
     <div>
-      {location.pathname != "/watch" && <Navbar />}
+      {location.pathname !== "/watch" && <Navbar />}
       <Route exact path="/" component={HomePage} />
-      <Route exact path="/blank" component={BlankPage}/>
+      <Route exact path="/blank" component={BlankPage} />
       <Route exact path="/watch" component={PlayVideo} />
-      {location.pathname != "/watch" && <Footer />}
+      {location.pathname !== "/watch" && <Footer />}
     </div>
   );
 });
