@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactPlayer from "react-player/youtube";
 import moviedb from "../../apis/theMovieDB";
 import MovieCard from "./MovieCard";
+import MovieInfo from "./MovieInfo/MovieInfo";
 
 const DiscoverPreview = () => {
   const [mute, setMute] = useState(true);
@@ -42,6 +43,7 @@ const DiscoverPreview = () => {
     }
     return (
       <div className="preview">
+        <MovieInfo />
         <ReactPlayer
           className="preview__player"
           width="100%"
