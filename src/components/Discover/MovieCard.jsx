@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const MovieCard = ({ videoInfo }) => {
   return (
@@ -8,7 +9,7 @@ const MovieCard = ({ videoInfo }) => {
       <p className="movie-card__description">{videoInfo.overview}</p>
       <div>
           <Link to="/watch" className="movie-card__play-movie">play</Link>
-          <button className="movie-card__more-details" >more info</button>
+          <button className="movie-card__more-details">more info</button>
       </div>
     </div>
   );
