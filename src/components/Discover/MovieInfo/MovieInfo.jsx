@@ -4,10 +4,9 @@ import VideoPreview from "./VideoPreview";
 import VideoPreviewText from "./VideoPreviewText";
 
 const MovieInfo = () => {
-  const [display, setDisplay] = useState(Context)
-  console.log(display._currentValue.display)
+  const { moreInfo, setMoreInfo } = useContext(Context);
   return (
-    <div className={display._currentValue.display ? "movieInfo" : "movieInfo-hide"}>
+    <div className={moreInfo ? "movieInfo" : "movieInfo-hide"}>
       <VideoPreview />
       <VideoPreviewText />
     </div>

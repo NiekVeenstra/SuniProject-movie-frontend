@@ -12,10 +12,10 @@ import HomePage from "./pages/HomePage";
 import { Context } from "./Context/Context";
 
 const App = withRouter(({ location }) => {
-  const [display, setDisplay] = useState(false);
+  const [moreInfo, setMoreInfo] = useState(false);
   return (
     <div>
-      <Context.Provider value={{display, setDisplay}}>
+      <Context.Provider value={{ moreInfo, setMoreInfo }}>
         {location.pathname !== "/watch" && <Navbar />}
         <Route exact path="/" component={HomePage} />
         <Route exact path="/blank" component={BlankPage} />

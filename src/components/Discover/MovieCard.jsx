@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Context } from "../../Context/Context";
 
 const MovieCard = ({ videoInfo }) => {
-  const [display, setDisplay] = useState(Context);
+  const { moreInfo, setMoreInfo } = useContext(Context);
+
   return (
     <div className="movie-card">
       <h1 className="movie-card__title">{videoInfo.title}</h1>
@@ -13,7 +14,7 @@ const MovieCard = ({ videoInfo }) => {
         <Link to="/watch" className="movie-card__play-movie">
           play
         </Link>
-        <button className="movie-card__more-details" onClick={() => setDisplay(true)}>
+        <button className="movie-card__more-details" onClick={() => setMoreInfo(true)}>
           more info
         </button>
       </div>
