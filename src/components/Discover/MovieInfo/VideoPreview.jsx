@@ -17,6 +17,7 @@ const VideoPreview = () => {
                 url="https://www.youtube.com/embed/odM92ap8_c0"
                 // onLoad={() => setMute(!mute)}
             ></ReactPlayer>
+            <h1>Hello</h1>
             </div>
         </div>
     )

@@ -114,6 +114,7 @@
 .videoPreview {
   // height: 50%;
   border: 1px solid orange;
+  color: red;
   display: flex;
   align-items: center;
   &__container {
@@ -136,8 +137,29 @@
   }
 }
 .videoPreviewText{
-  // height: 50%;
-  border: 1px solid blue;
+  height: 30%;
+  // border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  &__1{
+    display: flex;
+    height: 50%;
+  }
+  &__1-1{
+    // border: 1px solid salmon;
+    background-color:black;
+    width: 60%;
+  }
+  &__1-2{
+    border: 1px solid lime;
+    background-color: black;
+    width: 40%;
+  }
+  &__2{
+    border: 1px solid blue;
+    background-color: black;
+    height: 50%;
+  }
 }
 
 
@@ -145,12 +167,12 @@
 
 .movieInfo{
   position: absolute;
-
+  
   z-index: 20;
   display: flex;
   flex-direction: column;
   background-color: red;
-  color: blue;
+  color:grey;
   width: 70%;
   max-width: 100rem;
   height: 80rem;
