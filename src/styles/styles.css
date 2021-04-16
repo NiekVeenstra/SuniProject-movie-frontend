@@ -194,10 +194,12 @@ body {
   width: 50%;
 }
 
-.main-footer .row {
+.main-footer .footerRow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
