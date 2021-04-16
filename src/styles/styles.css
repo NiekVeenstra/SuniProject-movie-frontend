@@ -165,9 +165,9 @@ body {
 
 .home-page .box {
   width: 80%;
-  height: 30rem;
-  background-color: burlywood;
-  border: solid 1px orange;
+  height: 50rem;
+  background-color: black;
+  border: solid 1px black;
 }
 
 .main-footer {

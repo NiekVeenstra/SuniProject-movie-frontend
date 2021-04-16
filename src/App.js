@@ -20,7 +20,7 @@ const App = withRouter(({ location }) => {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/blank" component={BlankPage} />
         <Route exact path="/watch" component={PlayVideo} />
-        {location.pathname !== "/watch" && <Footer />}
+        {location.pathname !== "/watch" && location.pathname !== "/blank" && <Footer />}
       </Context.Provider>
     </div>
   );
