@@ -14,7 +14,7 @@ const MovieCard = ({ videoInfo }) => {
         <Link to="/watch" className="movie-card__play-movie">
           play
         </Link>
-        <button className="movie-card__more-details" onClick={() => setMoreInfo(true)}>
+        <button className="movie-card__more-details" onClick={() => setMoreInfo(!moreInfo)}>
           more info
         </button>
       </div>
