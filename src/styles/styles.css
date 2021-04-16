@@ -387,6 +387,7 @@ body {
 
 .videoPreview {
   border: 1px solid orange;
+  color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,7 +421,38 @@ body {
 }
 
 .videoPreviewText {
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.videoPreviewText__1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50%;
+}
+
+.videoPreviewText__1-1 {
+  background-color: black;
+  width: 60%;
+}
+
+.videoPreviewText__1-2 {
+  border: 1px solid lime;
+  background-color: black;
+  width: 40%;
+}
+
+.videoPreviewText__2 {
   border: 1px solid blue;
+  background-color: black;
+  height: 50%;
 }
 
 .movieInfo {
@@ -434,7 +466,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: red;
-  color: blue;
+  color: grey;
   width: 70%;
   max-width: 100rem;
   height: 80rem;
