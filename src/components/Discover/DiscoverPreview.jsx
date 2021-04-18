@@ -37,7 +37,8 @@ const DiscoverPreview = () => {
             src={`https://image.tmdb.org/t/p/original/${backdrop}`}
             alt=""
           />
-          <MovieCard videoInfo={videoInfo}/>
+          <MovieCard videoInfo={videoInfo} />
+          <MovieInfo />
         </div>
       );
     }
@@ -54,7 +55,7 @@ const DiscoverPreview = () => {
           loop={true}
           url="https://www.youtube.com/embed/odM92ap8_c0"
         ></ReactPlayer>
-        <MovieCard videoInfo={videoInfo}/>
+        <MovieCard videoInfo={videoInfo} />
         <button className="preview__button-sound" onClick={() => setMute(!mute)}>
           <div className={mute ? "sound-img-on sound-img" : "sound-img-off sound-img"} />
         </button>

@@ -238,7 +238,6 @@ body {
   padding-bottom: 56.25%;
   padding-top: 0;
   height: 0;
-  overflow: hidden;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -459,7 +458,7 @@ body {
 
 .movieInfo {
   position: absolute;
-  z-index: 20;
+  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -471,8 +470,7 @@ body {
   color: grey;
   width: 70%;
   max-width: 100rem;
-  height: 80rem;
-  margin-top: 50%;
+  top: 10%;
 }
 
 .movieInfo-hide {
