@@ -17,10 +17,10 @@ const DiscoverPreview = () => {
         // moviedb.get(`/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`),
         moviedb.get(`/discover/movie`),
       ]);
-      console.log("testing");
+      console.log(movie);
 
-      // setBackdrop(movie.data.results[0].backdrop_path);
-      // setVideoInfo(movie.data.results[0]);
+      setBackdrop(movie.data.results[0].backdrop_path);
+      setVideoInfo(movie.data.results[0]);
       setTimeout(() => {
         setIsLoading(false);
       }, 3000);
@@ -54,7 +54,7 @@ const DiscoverPreview = () => {
           muted={mute}
           controls={false}
           loop={true}
-          // url="https://www.youtube.com/embed/odM92ap8_c0"
+          url="https://www.youtube.com/embed/odM92ap8_c0"
         ></ReactPlayer>
         <MovieCard videoInfo={videoInfo} />
         <button className="preview__button-sound" onClick={() => setMute(!mute)}>
