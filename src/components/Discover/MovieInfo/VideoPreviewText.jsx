@@ -23,7 +23,7 @@ const VideoPreviewText = () => {
                     <p><span>CAST:</span> API</p>
                     <p><span>SCHRIJVER:</span> api</p>
                     <p><span>GENRE:</span> API</p>
-                    <p><span>DEZE TITEL IS:</span> MEESLEPAND, FEELGOOD</p>
+                    <p><span>DEZE TITEL IS:</span> MEESLEPEND, FEELGOOD</p>
                     <p><span>LEEFTIJDCLASSIFICATIE:</span> #ICON #ICON kan angst en geweld bevatten.</p>
 
             </div>
