@@ -18,7 +18,7 @@ const VideoPreview = () => {
                 url="https://www.youtube.com/embed/odM92ap8_c0"
                 // onLoad={() => setMute(!mute)}
             ></ReactPlayer>
-            <h1>Hello</h1>
+            <h1>Testing</h1>
                 <button className="preview__button-sound2" onClick={() => setMute(!mute)}>
                     <div className={mute ? "sound-img-on sound-img" : "sound-img-off sound-img"} />
                 </button>

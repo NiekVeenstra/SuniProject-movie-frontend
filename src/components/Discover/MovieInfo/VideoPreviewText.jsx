@@ -1,4 +1,5 @@
 import React from 'react'
+import MovieInfo from './MovieInfo'
 
 const VideoPreviewText = () => {
     return (
