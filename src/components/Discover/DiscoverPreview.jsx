@@ -16,10 +16,8 @@ const DiscoverPreview = () => {
       const [movie] = await Promise.all([
         // moviedb.get(`/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`),
         moviedb.get(`/discover/movie`),
-
       ]);
-      // console.log(movie.data.results);
-      console.log(movie)
+      console.log(movie);
 
       setBackdrop(movie.data.results[0].backdrop_path);
       setVideoInfo(movie.data.results[0]);
