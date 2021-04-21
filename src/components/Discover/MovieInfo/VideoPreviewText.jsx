@@ -14,7 +14,7 @@ const VideoPreviewText = ({ videoInfo, videoInfo2 }) => {
                 </div>
                 <div className="videoPreviewText__1-2">
                     <br/><p><span>Cast:</span> informatie, Brad Pitt, Goldie, Hawn, Acteur</p>
-                    <p><span>Genres:</span>{videoInfo2.data.genres[0].name}, {videoInfo2.data.genres[1].name}</p>
+                    {/* <p><span>Genres:</span>{videoInfo2.data.genres[0].name}, {videoInfo2.data.genres[1].name}</p> */}
                     <p><span>Deze film is:</span> meeslepend</p>
                 </div>
             </div>
@@ -23,7 +23,7 @@ const VideoPreviewText = ({ videoInfo, videoInfo2 }) => {
                     <p><span>Regiseur:</span> API</p>
                     <p><span>CAST:</span> API</p>
                     <p><span>SCHRIJVER:</span> api</p>
-                    <p><span>GENRE:</span>{videoInfo2.data.genres[0].name}, {videoInfo2.data.genres[1].name}</p>
+                    {/* <p><span>GENRE:</span>{videoInfo2.data.genres[0].name}, {videoInfo2.data.genres[1].name}</p> */}
                     <p><span>DEZE TITEL IS:</span> MEESLEPEND, FEELGOOD</p>
                     <p><span>LEEFTIJDCLASSIFICATIE:</span> #ICON #ICON kan angst en geweld bevatten.</p>
 
