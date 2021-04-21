@@ -39,13 +39,13 @@ const DiscoverPreview = () => {
             alt=""
           />
           <MovieCard videoInfo={videoInfo} />
-          <MovieInfo />
+          <MovieInfo videoInfo={videoInfo}/>
         </div>
       );
     }
     return (
       <div className="preview">
-        <MovieInfo />
+        <MovieInfo videoInfo={videoInfo}/>
         <ReactPlayer
           className="preview__player"
           width="100%"
