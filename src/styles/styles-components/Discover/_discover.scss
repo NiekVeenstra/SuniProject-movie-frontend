@@ -52,6 +52,39 @@
       background-size: cover;
     }
   }
+  &__button-sound2 {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20%;
+    left: 95%;
+    z-index: 4;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.527);
+    .sound-img {
+      z-index: 3;
+      width: auto;
+      height: 100%;
+      width: 100%;
+    }
+    .sound-img-on {
+      background: url("https://i.postimg.cc/MKKfY7Xg/3643734-high-sound-speaker-voice-volume-113403.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .sound-img-off {
+      background: url("https://i.postimg.cc/nhXsyn4k/3643732-mute-sound-speaker-voice-volume-113439.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
 }
 .movie-card {
   z-index: 2;
@@ -110,7 +143,22 @@
     max-height: 100vh;
   }
 }
+.movieInfo{
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.767);
+  color: whitesmoke;
+  width: 70%;
+  max-width: 100rem;
+  top: 10%;
 
+
+}
+.movieInfo-hide{
+  display: none;
+}
 .videoPreview {
   // height: 50%;
   border: 1px solid orange;
@@ -144,40 +192,50 @@
   &__1{
     display: flex;
     height: 50%;
+    margin-top: 20px;
   }
   &__1-1{
     // border: 1px solid salmon;
     background-color:black;
     width: 60%;
+    p {
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+    span{
+      color: rgb(140, 235, 16);
+    }
+    #SamenvattingFilm{
+      font-size: 15px;
+    }
   }
   &__1-2{
     border: 1px solid lime;
     background-color: black;
     width: 40%;
+    p {
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+    span{
+      color: grey;
+    }
   }
   &__2{
     border: 1px solid blue;
     background-color: black;
     height: 50%;
+    margin-top: 20px;
+    p {
+      margin-bottom: 7px;
+      font-size: 11px;
+    }
+    span{
+      color: grey;
+    }
   }
 }
 
 
 
 
-.movieInfo{
-  position: absolute;
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  background-color: red;
-  color:grey;
-  width: 70%;
-  max-width: 100rem;
-  top: 10%;
-
-
-}
-.movieInfo-hide{
-  display: none;
-}
