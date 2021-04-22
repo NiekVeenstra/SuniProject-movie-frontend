@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MovieInfo from "./MovieInfo";
 
-const VideoPreviewText = ({ videoInfo, videoInfo2 }) => {
-  console.log(videoInfo2);
+const VideoPreviewText = ({ videoInfo, videoInfo2, videoInfoGenres1, videoInfoGenres2 }) => {
   return (
     <div className="videoPreviewText">
       <div className="videoPreviewText__1">
@@ -20,7 +19,12 @@ const VideoPreviewText = ({ videoInfo, videoInfo2 }) => {
           <p>
             <span>Cast:</span> informatie, Brad Pitt, Goldie, Hawn, Acteur
           </p>
-          {/* <p><span>Genres:</span>{videoInfo2.data.genres[0].name}, {videoInfo2.data.genres[1].name}</p> */}
+          <p>
+            <span>Genres:</span>
+            {`${videoInfoGenres1.name}
+
+            ${videoInfoGenres2.name}`}
+          </p>
           <p>
             <span>Deze film is:</span> meeslepend
           </p>
@@ -38,7 +42,10 @@ const VideoPreviewText = ({ videoInfo, videoInfo2 }) => {
         <p>
           <span>SCHRIJVER:</span> api
         </p>
-        {/* <p><span>GENRE:</span>{videoInfo2.data.genres[0].name}, {videoInfo2.data.genres[1].name}</p> */}
+        <p>
+          <span>GENRE:</span>{" "}
+          {`${videoInfoGenres1.name} ${videoInfoGenres2.name}`}
+        </p>
         <p>
           <span>DEZE TITEL IS:</span> MEESLEPEND, FEELGOOD
         </p>
