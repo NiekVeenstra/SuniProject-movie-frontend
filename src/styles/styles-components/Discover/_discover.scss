@@ -143,7 +143,7 @@
     max-height: 100vh;
   }
 }
-.movieInfo{
+.movieInfo {
   position: absolute;
   z-index: 5;
   display: flex;
@@ -153,12 +153,11 @@
   width: 70%;
   max-width: 100rem;
   top: 10%;
-
-
 }
-.movieInfo-hide{
+.movieInfo-hide {
   display: none;
 }
+
 .videoPreview {
   // height: 50%;
   border: 1px solid orange;
@@ -183,33 +182,36 @@
     top: 0px;
     max-height: 100vh;
   }
+  &__close-window {
+    background-color: rgba(128, 128, 128, 0.678);
+  }
 }
-.videoPreviewText{
+.videoPreviewText {
   height: 30%;
   // border: 1px solid blue;
   display: flex;
   flex-direction: column;
-  &__1{
+  &__1 {
     display: flex;
     height: 50%;
     margin-top: 20px;
   }
-  &__1-1{
+  &__1-1 {
     // border: 1px solid salmon;
-    background-color:black;
+    background-color: black;
     width: 60%;
     p {
       margin-bottom: 10px;
       font-size: 12px;
     }
-    span{
+    span {
       color: rgb(140, 235, 16);
     }
-    #SamenvattingFilm{
+    #SamenvattingFilm {
       font-size: 15px;
     }
   }
-  &__1-2{
+  &__1-2 {
     border: 1px solid lime;
     background-color: black;
     width: 40%;
@@ -217,11 +219,11 @@
       margin-bottom: 10px;
       font-size: 12px;
     }
-    span{
+    span {
       color: grey;
     }
   }
-  &__2{
+  &__2 {
     border: 1px solid blue;
     background-color: black;
     height: 50%;
@@ -230,12 +232,8 @@
       margin-bottom: 7px;
       font-size: 11px;
     }
-    span{
+    span {
       color: grey;
     }
   }
 }
-
-
-
-
