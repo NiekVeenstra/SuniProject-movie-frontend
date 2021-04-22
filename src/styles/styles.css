@@ -485,6 +485,10 @@ body {
   max-height: 100vh;
 }
 
+.videoPreview__close-window {
+  background-color: rgba(128, 128, 128, 0.678);
+}
+
 .videoPreviewText {
   height: 30%;
   display: -webkit-box;
