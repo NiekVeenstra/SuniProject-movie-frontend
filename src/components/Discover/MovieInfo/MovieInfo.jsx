@@ -10,13 +10,17 @@ const MovieInfo = ({ videoInfo }) => {
   const [videoInfo2, setVideoInfo2] = useState({});
   const [videoInfoGenres1, setVideoInfoGenres1] = useState([]);
   const [videoInfoGenres2, setVideoInfoGenres2] = useState([]);
+  const [productionComp, setProductionComp] = useState([]);
+  const [language, setLanguage] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       const [Info2] = await Promise.all([theMovieDB.get(`/movie/${videoInfoID}`)]);
-      // console.log(Info2);
+      console.log(Info2.data);
       setVideoInfo2(Info2.data);
       setVideoInfoGenres1(Info2.data.genres[0]);
       setVideoInfoGenres2(Info2.data.genres[1]);
+      setProductionComp(Info2.data.production_companies[0]);
+      setLanguage(Info2.data.spoken_languages[0]);
     };
 
     fetchData();
@@ -30,6 +34,8 @@ const MovieInfo = ({ videoInfo }) => {
         videoInfo2={videoInfo2}
         videoInfoGenres1={videoInfoGenres1}
         videoInfoGenres2={videoInfoGenres2}
+        productionComp={productionComp}
+        language={language}
       />
       {/* {console.log(videoInfo2)} */}
     </div>

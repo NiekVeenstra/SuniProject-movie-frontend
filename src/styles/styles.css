@@ -431,6 +431,9 @@ body {
 
 .movieInfo {
   position: absolute;
+  border: solid grey 1px;
+  -webkit-box-shadow: white 5px;
+          box-shadow: white 5px;
   z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -439,7 +442,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.767);
+  background-color: black;
   color: whitesmoke;
   width: 70%;
   max-width: 100rem;
@@ -451,8 +454,6 @@ body {
 }
 
 .videoPreview {
-  border: 1px solid orange;
-  color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -527,7 +528,6 @@ body {
 }
 
 .videoPreviewText__1-2 {
-  border: 1px solid lime;
   background-color: black;
   width: 40%;
 }
@@ -542,7 +542,6 @@ body {
 }
 
 .videoPreviewText__2 {
-  border: 1px solid blue;
   background-color: black;
   height: 50%;
   margin-top: 20px;
