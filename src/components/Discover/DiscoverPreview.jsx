@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import ReactPlayer from "react-player/youtube";
 import moviedb from "../../apis/theMovieDB";
+import { Context } from "../../Context/Context";
 import MovieCard from "./MovieCard";
 import MovieInfo from "./MovieInfo/MovieInfo";
 
 const DiscoverPreview = () => {
   const [mute, setMute] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [backdrop, setBackdrop] = useState({});
   const [videoInfo, setVideoInfo] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
+  const {videoInfoID, setVideoInfoID} = useContext(Context);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,6 +23,7 @@ const DiscoverPreview = () => {
 
       setBackdrop(movie.data.results[0].backdrop_path);
       setVideoInfo(movie.data.results[0]);
+      setVideoInfoID(movie.data.results[0].id);
       setTimeout(() => {
         setIsLoading(false);
       }, 3000);

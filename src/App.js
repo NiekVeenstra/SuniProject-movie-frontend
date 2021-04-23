@@ -13,9 +13,11 @@ import { Context } from "./Context/Context";
 
 const App = withRouter(({ location }) => {
   const [moreInfo, setMoreInfo] = useState(false);
+  const [videoInfoID, setVideoInfoID] = useState(399566);
+  console.log(videoInfoID);
   return (
     <div>
-      <Context.Provider value={{ moreInfo, setMoreInfo }}>
+      <Context.Provider value={{ moreInfo, setMoreInfo, videoInfoID, setVideoInfoID }}>
         {location.pathname !== "/watch" && <Navbar />}
         <Route exact path="/" component={HomePage} />
         <Route exact path="/blank" component={BlankPage} />
