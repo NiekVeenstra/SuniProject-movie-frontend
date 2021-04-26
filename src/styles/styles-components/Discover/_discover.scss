@@ -145,10 +145,12 @@
 }
 .movieInfo {
   position: absolute;
+  // border: solid grey 1px;
+  // box-shadow: white 5px;
   z-index: 5;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.767);
+  background-color: rgb(0, 0, 0);
   color: whitesmoke;
   width: 70%;
   max-width: 100rem;
@@ -160,8 +162,8 @@
 
 .videoPreview {
   // height: 50%;
-  border: 1px solid orange;
-  color: red;
+  // border: 1px solid orange;
+  // color: red;
   display: flex;
   align-items: center;
   &__container {
@@ -189,6 +191,7 @@
 .videoPreviewText {
   height: 30%;
   // border: 1px solid blue;
+  background: -webkit-linear-gradient(black 25%, rgb(56, 56, 56));
   display: flex;
   flex-direction: column;
   &__1 {
@@ -198,7 +201,7 @@
   }
   &__1-1 {
     // border: 1px solid salmon;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     width: 60%;
     p {
       margin-bottom: 10px;
@@ -212,8 +215,8 @@
     }
   }
   &__1-2 {
-    border: 1px solid lime;
-    background-color: black;
+    // border: 1px solid lime;
+    background-color: rgba(0, 0, 0, 0);
     width: 40%;
     p {
       margin-bottom: 10px;
@@ -224,8 +227,8 @@
     }
   }
   &__2 {
-    border: 1px solid blue;
-    background-color: black;
+    // border: 1px solid blue;
+    background-color: rgba(0, 0, 0, 0);
     height: 50%;
     margin-top: 20px;
     p {
@@ -233,7 +236,7 @@
       font-size: 11px;
     }
     span {
-      color: grey;
+      color: rgb(155, 155, 155);
     }
   }
 }

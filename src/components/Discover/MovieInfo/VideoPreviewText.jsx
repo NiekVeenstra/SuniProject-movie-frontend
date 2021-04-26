@@ -1,23 +1,24 @@
+import { prettyDOM } from "@testing-library/dom";
 import React, { useEffect, useState } from "react";
 import MovieInfo from "./MovieInfo";
 
-const VideoPreviewText = ({ videoInfo, videoInfo2, videoInfoGenres1, videoInfoGenres2 }) => {
+const VideoPreviewText = ({ videoInfo, videoInfo2, videoInfoGenres1, videoInfoGenres2, productionComp, language }) => {
   return (
     <div className="videoPreviewText">
       <div className="videoPreviewText__1">
         <div className="videoPreviewText__1-1">
           <br />
           <p>
-            <span>97% match </span> #ICON #ICON min.
+          Rated<span> {videoInfo2.vote_average} in popularity.</span> {videoInfo2.runtime} min.
           </p>
-          <h2>#icon nr.8 in films vandaag</h2>
+          <h2>{videoInfo2.tagline}</h2>
           <br />
           <p id="SamenvattingFilm">{videoInfo.overview}</p>
         </div>
         <div className="videoPreviewText__1-2">
           <br />
           <p>
-            <span>Cast:</span> informatie, Brad Pitt, Goldie, Hawn, Acteur
+            <span>Spoken language:</span> {language.name}
           </p>
           <p>
             <span>Genres:</span>
@@ -26,7 +27,7 @@ const VideoPreviewText = ({ videoInfo, videoInfo2, videoInfoGenres1, videoInfoGe
             ${videoInfoGenres2.name}`}
           </p>
           <p>
-            <span>Deze film is:</span> meeslepend
+            <span>Release date:</span> {videoInfo2.release_date}
           </p>
         </div>
       </div>
@@ -34,24 +35,24 @@ const VideoPreviewText = ({ videoInfo, videoInfo2, videoInfoGenres1, videoInfoGe
         <h1>{videoInfo.title}</h1>
         <br />
         <p>
-          <span>Regiseur:</span> API
+          <span>production companies:</span>{productionComp.name}
         </p>
         <p>
-          <span>CAST:</span> API
+          <span>Spoken language:</span> {language.name}
         </p>
-        <p>
+        {/* <p>
           <span>SCHRIJVER:</span> api
-        </p>
+        </p> */}
         <p>
           <span>GENRE:</span>{" "}
           {`${videoInfoGenres1.name} ${videoInfoGenres2.name}`}
         </p>
-        <p>
+        {/* <p>
           <span>DEZE TITEL IS:</span> MEESLEPEND, FEELGOOD
-        </p>
-        <p>
+        </p> */}
+        {/* <p>
           <span>LEEFTIJDCLASSIFICATIE:</span> #ICON #ICON kan angst en geweld bevatten.
-        </p>
+        </p> */}
       </div>
     </div>
   );
