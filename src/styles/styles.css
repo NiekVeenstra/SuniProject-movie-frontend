@@ -317,6 +317,49 @@ body {
   background-size: cover;
 }
 
+.preview__button-sound2 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20%;
+  left: 95%;
+  z-index: 4;
+  cursor: pointer;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(255, 255, 255, 0.527);
+}
+
+.preview__button-sound2 .sound-img {
+  z-index: 3;
+  width: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.preview__button-sound2 .sound-img-on {
+  background: url("https://i.postimg.cc/MKKfY7Xg/3643734-high-sound-speaker-voice-volume-113403.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.preview__button-sound2 .sound-img-off {
+  background: url("https://i.postimg.cc/nhXsyn4k/3643732-mute-sound-speaker-voice-volume-113439.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .movie-card {
   z-index: 2;
   position: absolute;
@@ -396,9 +439,28 @@ body {
   max-height: 100vh;
 }
 
+.movieInfo {
+  position: absolute;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: black;
+  color: whitesmoke;
+  width: 70%;
+  max-width: 100rem;
+  top: 10%;
+}
+
+.movieInfo-hide {
+  display: none;
+}
+
 .videoPreview {
-  border: 1px solid orange;
-  color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -431,8 +493,13 @@ body {
   max-height: 100vh;
 }
 
+.videoPreview__close-window {
+  background-color: rgba(128, 128, 128, 0.678);
+}
+
 .videoPreviewText {
   height: 30%;
+  background: -webkit-linear-gradient(black 25%, #383838);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -447,44 +514,54 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: 50%;
+  margin-top: 20px;
 }
 
 .videoPreviewText__1-1 {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   width: 60%;
 }
 
+.videoPreviewText__1-1 p {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.videoPreviewText__1-1 span {
+  color: #8ceb10;
+}
+
+.videoPreviewText__1-1 #SamenvattingFilm {
+  font-size: 15px;
+}
+
 .videoPreviewText__1-2 {
-  border: 1px solid lime;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   width: 40%;
 }
 
-.videoPreviewText__2 {
-  border: 1px solid blue;
-  background-color: black;
-  height: 50%;
+.videoPreviewText__1-2 p {
+  margin-bottom: 10px;
+  font-size: 12px;
 }
 
-.movieInfo {
-  position: absolute;
-  z-index: 5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: red;
+.videoPreviewText__1-2 span {
   color: grey;
-  width: 70%;
-  max-width: 100rem;
-  top: 10%;
 }
 
-.movieInfo-hide {
-  display: none;
+.videoPreviewText__2 {
+  background-color: rgba(0, 0, 0, 0);
+  height: 50%;
+  margin-top: 20px;
+}
+
+.videoPreviewText__2 p {
+  margin-bottom: 7px;
+  font-size: 11px;
+}
+
+.videoPreviewText__2 span {
+  color: #9b9b9b;
 }
 
 .movieLane {
