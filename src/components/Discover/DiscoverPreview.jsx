@@ -11,7 +11,9 @@ const DiscoverPreview = () => {
   const [videoInfo, setVideoInfo] = useState("");
   const [videoInfoID2, setVideoInfoID2] = useState("");
   const [videoPrev2, setVideoPrev2] = useState("");
+  const [fanArt2, setFanArt2] = useState("");
   console.log(videoInfoID2.id);
+
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
@@ -20,9 +22,9 @@ const DiscoverPreview = () => {
       ]);
       console.log(movie);
 
-      setBackdrop(movie.data.results[1]);
-      setVideoInfo(movie.data.results[1]);
-      setVideoInfoID2(movie.data.results[1]);
+      setBackdrop(movie.data.results[0]);
+      setVideoInfo(movie.data.results[0]);
+      setVideoInfoID2(movie.data.results[0]);
       setTimeout(() => {
         setIsLoading(false);
       }, 3000);
@@ -30,13 +32,18 @@ const DiscoverPreview = () => {
 
     fetchData();
   }, []);
+
   useEffect(() => {
     const fetchData = async () => {
-      const [videoPrev] = await Promise.all([moviedb.get(`/movie/${videoInfoID2.id}/videos`)]);
+      const [videoPrev, fanArt] = await Promise.all([
+        moviedb.get(`/movie/${videoInfoID2.id}/videos`),
+        moviedb.get(`http://webservice.fanart.tv/v3/movies/${videoInfoID2.id}?api_key=00c655f5cf699862386184d892b7378f`),
+      ]);
 
       console.log(videoPrev);
 
       setVideoPrev2(videoPrev.data[1].href);
+      setFanArt2(fanArt.data.hdmovielogo[0])
     };
 
     fetchData();
@@ -51,7 +58,7 @@ const DiscoverPreview = () => {
             src={`https://image.tmdb.org/t/p/original/${backdrop.backdrop_path}`}
             alt=""
           />
-          <MovieCard videoInfo={videoInfo} />
+          <MovieCard videoInfo={videoInfo} fanArt2={fanArt2}/>
           <MovieInfo videoInfo={videoInfo} videoInfoID2={videoInfoID2} />
         </div>
       );
@@ -69,7 +76,7 @@ const DiscoverPreview = () => {
           loop={true}
           url={videoPrev2}
         ></ReactPlayer>
-        <MovieCard videoInfo={videoInfo} />
+        <MovieCard videoInfo={videoInfo} fanArt2={fanArt2}/>
         <button className="preview__button-sound" onClick={() => setMute(!mute)}>
           <div className={mute ? "sound-img-on sound-img" : "sound-img-off sound-img"} />
         </button>
