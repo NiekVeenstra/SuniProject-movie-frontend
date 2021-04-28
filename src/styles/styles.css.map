@@ -8,7 +8,8 @@
         "styles-components/Navbar/_Navbar.scss",
         "styles-pages/_home-page.scss",
         "styles-components/Footer/_Footer.scss",
-        "styles-components/Discover/_discover.scss"
+        "styles-components/Discover/_discover.scss",
+        "styles-components/Discover/_movieLane.scss"
     ],
     "names": [],
     "file": "styles.css"
