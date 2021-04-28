@@ -1,6 +1,4 @@
-import { prettyDOM } from "@testing-library/dom";
-import React, { useEffect, useState } from "react";
-import MovieInfo from "./MovieInfo";
+import React from "react";
 
 const VideoPreviewText = ({ videoInfo, videoInfo2, videoInfoGenres1, videoInfoGenres2, productionComp, language }) => {
   return (
