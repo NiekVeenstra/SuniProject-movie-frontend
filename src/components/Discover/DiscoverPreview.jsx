@@ -58,14 +58,14 @@ const DiscoverPreview = () => {
             src={`https://image.tmdb.org/t/p/original/${backdrop.backdrop_path}`}
             alt=""
           />
-          <MovieCard videoInfo={videoInfo} fanArt2={fanArt2}/>
-          <MovieInfo videoInfo={videoInfo} videoInfoID2={videoInfoID2} />
+          <MovieCard videoInfo={videoInfo} fanArt2={fanArt2} />
+          <MovieInfo videoInfo={videoInfo} videoInfoID2={videoInfoID2} fanArt2={fanArt2} />
         </div>
       );
     }
     return (
       <div className="preview">
-        <MovieInfo videoInfo={videoInfo} videoInfoID2={videoInfoID2} />
+        <MovieInfo videoInfo={videoInfo} videoInfoID2={videoInfoID2} fanArt2={fanArt2} />
         <ReactPlayer
           className="preview__player"
           width="100%"
@@ -76,7 +76,7 @@ const DiscoverPreview = () => {
           loop={true}
           url={videoPrev2}
         ></ReactPlayer>
-        <MovieCard videoInfo={videoInfo} fanArt2={fanArt2}/>
+        <MovieCard videoInfo={videoInfo} fanArt2={fanArt2} />
         <button className="preview__button-sound" onClick={() => setMute(!mute)}>
           <div className={mute ? "sound-img-on sound-img" : "sound-img-off sound-img"} />
         </button>
