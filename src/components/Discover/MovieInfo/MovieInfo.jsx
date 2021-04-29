@@ -4,7 +4,7 @@ import { Context } from "../../../Context/Context";
 import VideoPreview from "./VideoPreview";
 import VideoPreviewText from "./VideoPreviewText";
 
-const MovieInfo = ({ videoInfo, videoInfoID2, fanArt2 }) => {
+const MovieInfo = ({ videoInfo, videoInfoID2, fanArt2, videoPrev2 }) => {
   const { moreInfo } = useContext(Context);
   const [videoInfo2, setVideoInfo2] = useState({});
   const [videoInfoGenres1, setVideoInfoGenres1] = useState([]);
@@ -26,7 +26,7 @@ const MovieInfo = ({ videoInfo, videoInfoID2, fanArt2 }) => {
 
   return (
     <div className={moreInfo ? "movieInfo" : "movieInfo-hide"}>
-      <VideoPreview fanArt2={fanArt2} />
+      <VideoPreview fanArt2={fanArt2} videoPrev2={videoPrev2} />
       <VideoPreviewText
         videoInfo={videoInfo}
         videoInfo2={videoInfo2}

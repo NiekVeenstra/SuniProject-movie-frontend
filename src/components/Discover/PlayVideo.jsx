@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import ReactPlayer from "react-player/youtube";
+import { Context } from "../../Context/Context";
 
 const PlayVideo = () => {
-  const [mute, setMute] = useState(true);
-
+  const [mute] = useState(true);
+  const { playVideo } = useContext(Context);
+  console.log(playVideo);
   return (
     <div className="play-video">
       <div className="play-video__container">
@@ -12,11 +14,10 @@ const PlayVideo = () => {
           width="100%"
           height="100%"
           playing={true}
-          muted={mute}
+          muted={!mute}
           controls={true}
           loop={true}
-          url="https://www.youtube.com/embed/odM92ap8_c0"
-          onLoad={() => setMute(!mute)}
+          url={playVideo}
         ></ReactPlayer>
       </div>
     </div>
