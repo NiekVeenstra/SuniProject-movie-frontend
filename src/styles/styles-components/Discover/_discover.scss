@@ -188,6 +188,43 @@
   }
   &__close-window {
     background-color: rgba(128, 128, 128, 0.678);
+    right: 2%;
+    position: absolute;
+    top: 1%;
+    font-size: 15px;
+  }
+  &__controlePanel{
+    // border: 1px solid blue;
+    position: absolute;
+    margin-top: 85%;
+    width: 200px;
+    // height: 150px;
+    height: 30%;
+    margin-left: 2.5%;
+    
+  }
+  &__title{
+    width: 100%;
+  }
+  &__playButton{
+    // border: 1px solid red;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    height: 30%;
+    justify-content: space-around;
+
+  }
+  .far{
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.602);
+    // border: 1px solid greenyellow;
+
+  }
+  .far:hover{
+    color: rgb(140, 235, 16);
+    cursor: pointer;
   }
 }
 .videoPreviewText {

@@ -495,6 +495,46 @@ body {
 
 .videoPreview__close-window {
   background-color: rgba(128, 128, 128, 0.678);
+  right: 2%;
+  position: absolute;
+  top: 1%;
+  font-size: 15px;
+}
+
+.videoPreview__controlePanel {
+  position: absolute;
+  margin-top: 85%;
+  width: 200px;
+  height: 30%;
+  margin-left: 2.5%;
+}
+
+.videoPreview__title {
+  width: 100%;
+}
+
+.videoPreview__playButton {
+  width: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.videoPreview .far {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.602);
+}
+
+.videoPreview .far:hover {
+  color: #8ceb10;
+  cursor: pointer;
 }
 
 .videoPreviewText {
