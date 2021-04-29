@@ -1,6 +1,4 @@
-import { prettyDOM } from "@testing-library/dom";
-import React, { useEffect, useState } from "react";
-import MovieInfo from "./MovieInfo";
+import React from "react";
 
 const VideoPreviewText = ({ videoInfo, videoInfo2, videoInfoGenres1, videoInfoGenres2, productionComp, language }) => {
   return (
@@ -9,7 +7,7 @@ const VideoPreviewText = ({ videoInfo, videoInfo2, videoInfoGenres1, videoInfoGe
         <div className="videoPreviewText__1-1">
           <br />
           <p>
-          Rated<span> {videoInfo2.vote_average} in popularity.</span> {videoInfo2.runtime} min.
+            Rated Nr.<span> {videoInfo2.vote_average} in popularity.</span> {videoInfo2.runtime} min.
           </p>
           <h2>{videoInfo2.tagline}</h2>
           <br />

@@ -1,13 +1,14 @@
 import React from "react";
 import DiscoverPreview from "../components/Discover/DiscoverPreview";
-// import MovieInfo from "../components/Discover/MovieInfo/MovieInfo";
+import MovieLane from "../components/Discover/MovieLane/MovieLane";
 
 
 const HomePage = () => {
   return (
     <div className="home-page">
       <DiscoverPreview />
-      {/* <MovieInfo /> */}
+      <MovieLane/>
+      <MovieLane/>
       <div className="box"></div>
     </div>
   );
