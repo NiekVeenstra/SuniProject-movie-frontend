@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import down from '../../../styles/IMG/tumbsDown.svg'
-import up from '../../../styles/IMG/tumbsUp.svg'
 
 
 const VideoPreviewPlayPanel = ({ fanArt2 }) => {
@@ -12,10 +10,8 @@ const VideoPreviewPlayPanel = ({ fanArt2 }) => {
                 <Link to="/watch" className="movie-card__play-movie">
                     play
                 </Link>
-                {/* <img className="videoPreview__likeIMG" src={down}></img> */}
                 <i className="far fa-thumbs-up"></i>
                 <i className="far fa-thumbs-down"></i>
-                {/* <img className="videoPreview__likeIMG" src={up}></img> */}
             </div>
 
         </div>

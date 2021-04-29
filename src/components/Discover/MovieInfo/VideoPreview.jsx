@@ -3,7 +3,7 @@ import ReactPlayer from "react-player/youtube";
 import { Context } from "../../../Context/Context";
 import VideoPreviewPlayPanel from "./VideoPreviewPlayPanel";
 
-const VideoPreview = ({ fanArt2 }) => {
+const VideoPreview = ({ fanArt2, videoPrev2 }) => {
   const [mute, setMute] = useState(true);
   const { moreInfo, setMoreInfo } = useContext(Context);
 
@@ -18,12 +18,9 @@ const VideoPreview = ({ fanArt2 }) => {
           muted={mute}
           controls={true}
           loop={true}
-          url="https://www.youtube.com/embed/odM92ap8_c0"
-        // onLoad={() => setMute(!mute)}
+          // url="https://www.youtube.com/embed/odM92ap8_c0"
+          url={videoPrev2}
         ></ReactPlayer>
-        {/* <Link to="/watch" className="movie-card__play-movie">
-          play
-        </Link> */}
         <button className="videoPreview__close-window" onClick={() => setMoreInfo(!moreInfo)}>
           <strong>X</strong>
         </button>

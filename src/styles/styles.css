@@ -323,7 +323,7 @@ body {
   border-radius: 50%;
   position: absolute;
   bottom: 20%;
-  left: 95%;
+  right: 3%;
   z-index: 4;
   cursor: pointer;
   outline: none;
@@ -366,7 +366,6 @@ body {
   top: 30%;
   left: 10%;
   width: 25rem;
-  height: 16rem;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -382,9 +381,11 @@ body {
 
 .movie-card__title {
   width: 100%;
+  margin-left: -2rem;
 }
 
 .movie-card__description {
+  margin: 1rem 0;
   font-size: 1.3rem;
 }
 
@@ -503,8 +504,7 @@ body {
 
 .videoPreview__controlePanel {
   position: absolute;
-  margin-top: 85%;
-  width: 200px;
+  width: 20rem;
   bottom: 16%;
   margin-left: 2.5%;
 }
@@ -515,21 +515,20 @@ body {
 
 .videoPreview__playButton {
   width: 100%;
-  padding: 20px;
+  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 30%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
 .videoPreview .far {
   font-size: 22px;
-  color: rgba(255, 255, 255, 0.479);
+  color: rgba(255, 255, 255, 0.602);
 }
 
 .videoPreview .far:hover {
@@ -636,6 +635,9 @@ body {
   }
   .videoPreviewText__1-2 {
     padding-left: 0;
+  }
+  .videoPreview__controlePanel {
+    width: 10rem;
   }
 }
 
