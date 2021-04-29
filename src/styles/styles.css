@@ -497,6 +497,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-left: 50px;
+  padding-bottom: 20px;
 }
 
 .videoPreviewText__1 {
@@ -528,6 +530,7 @@ body {
 .videoPreviewText__1-2 {
   background-color: rgba(0, 0, 0, 0);
   width: 40%;
+  padding-left: 50px;
 }
 
 .videoPreviewText__1-2 p {
