@@ -3,6 +3,7 @@
   padding-bottom: 56.25%;
   padding-top: 0;
   height: 0;
+  // min-height: 40rem;
   // overflow: hidden;
   width: 100%;
   display: flex;
@@ -98,7 +99,8 @@
   flex-direction: column;
   justify-content: space-between;
   &__title {
-    font-size: 2.5rem;
+    // font-size: 2.5rem;
+    width: 100%;
   }
   &__description {
     font-size: 1.3rem;
@@ -240,6 +242,24 @@
     }
     span {
       color: rgb(155, 155, 155);
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .preview {
+    min-height: 30rem;
+  }
+  .movie-card {
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    height: auto;
+    &__description {
+      display: none;
     }
   }
 }
