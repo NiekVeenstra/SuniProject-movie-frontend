@@ -59,7 +59,7 @@
     border-radius: 50%;
     position: absolute;
     bottom: 20%;
-    left: 95%;
+    right: 3%;
     z-index: 4;
     cursor: pointer;
     outline: none;
@@ -93,7 +93,7 @@
   top: 30%;
   left: 10%;
   width: 25rem;
-  height: 16rem;
+  // height: 16rem;
   color: white;
   display: flex;
   flex-direction: column;
@@ -101,8 +101,10 @@
   &__title {
     // font-size: 2.5rem;
     width: 100%;
+    margin-left: -2rem;
   }
   &__description {
+    margin: 1rem 0;
     font-size: 1.3rem;
   }
   &__play-movie,
@@ -196,8 +198,7 @@
   &__controlePanel{
     // border: 1px solid blue;
     position: absolute;
-    margin-top: 85%;
-    width: 200px;
+    width: 20rem;
     // height: 150px;
     // height: 30%;
     bottom: 16%;
@@ -210,10 +211,10 @@
   &__playButton{
     // border: 1px solid red;
     width: 100%;
-    padding: 20px;
+    padding: 2rem;
     display: flex;
     align-items: center;
-    height: 30%;
+    // height: 30%;
     justify-content: space-around;
 
   }
@@ -311,6 +312,10 @@
   .videoPreviewText__1-2{
     padding-left: 0;
   }
-
+  .videoPreview{
+    &__controlePanel{
+      width: 10rem;
+    }
+  }
 
 }

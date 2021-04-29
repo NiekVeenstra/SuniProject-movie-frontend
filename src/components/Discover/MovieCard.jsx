@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../Context/Context";
 
-const MovieCard = ({ videoInfo, fanArt2 }) => {
+const MovieCard = ({ videoInfo, fanArt2}) => {
   const { moreInfo, setMoreInfo } = useContext(Context);
   return (
     <div className="movie-card">
