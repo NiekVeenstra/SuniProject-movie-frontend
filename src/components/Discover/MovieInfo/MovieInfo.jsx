@@ -4,9 +4,8 @@ import { Context } from "../../../Context/Context";
 import VideoPreview from "./VideoPreview";
 import VideoPreviewText from "./VideoPreviewText";
 
-const MovieInfo = ({ videoInfo }) => {
-  const { moreInfo, setMoreInfo } = useContext(Context);
-  const { videoInfoID, setVideoInfoID } = useContext(Context);
+const MovieInfo = ({ videoInfo, videoInfoID2 }) => {
+  const { moreInfo } = useContext(Context);
   const [videoInfo2, setVideoInfo2] = useState({});
   const [videoInfoGenres1, setVideoInfoGenres1] = useState([]);
   const [videoInfoGenres2, setVideoInfoGenres2] = useState([]);
@@ -14,8 +13,7 @@ const MovieInfo = ({ videoInfo }) => {
   const [language, setLanguage] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const [Info2] = await Promise.all([theMovieDB.get(`/movie/${videoInfoID}`)]);
-      console.log(Info2.data);
+      const [Info2] = await Promise.all([theMovieDB.get(`/movie/${videoInfoID2.id}`)]);
       setVideoInfo2(Info2.data);
       setVideoInfoGenres1(Info2.data.genres[0]);
       setVideoInfoGenres2(Info2.data.genres[1]);
@@ -24,7 +22,7 @@ const MovieInfo = ({ videoInfo }) => {
     };
 
     fetchData();
-  }, []);
+  }, [videoInfoID2.id]);
 
   return (
     <div className={moreInfo ? "movieInfo" : "movieInfo-hide"}>
@@ -37,7 +35,6 @@ const MovieInfo = ({ videoInfo }) => {
         productionComp={productionComp}
         language={language}
       />
-      {/* {console.log(videoInfo2)} */}
     </div>
   );
 };
