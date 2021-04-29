@@ -505,7 +505,7 @@ body {
   position: absolute;
   margin-top: 85%;
   width: 200px;
-  height: 30%;
+  bottom: 16%;
   margin-left: 2.5%;
 }
 
@@ -624,6 +624,18 @@ body {
   }
   .movie-card__description {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .videoPreviewText__1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .videoPreviewText__1-2 {
+    padding-left: 0;
   }
 }
 
