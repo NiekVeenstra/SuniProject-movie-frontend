@@ -161,6 +161,16 @@ body {
 
 .home-page {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .home-page .box {
@@ -238,7 +248,6 @@ body {
   padding-bottom: 56.25%;
   padding-top: 0;
   height: 0;
-  overflow: hidden;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -308,13 +317,55 @@ body {
   background-size: cover;
 }
 
+.preview__button-sound2 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20%;
+  right: 3%;
+  z-index: 4;
+  cursor: pointer;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(255, 255, 255, 0.527);
+}
+
+.preview__button-sound2 .sound-img {
+  z-index: 3;
+  width: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.preview__button-sound2 .sound-img-on {
+  background: url("https://i.postimg.cc/MKKfY7Xg/3643734-high-sound-speaker-voice-volume-113403.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.preview__button-sound2 .sound-img-off {
+  background: url("https://i.postimg.cc/nhXsyn4k/3643732-mute-sound-speaker-voice-volume-113439.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .movie-card {
   z-index: 2;
   position: absolute;
   top: 30%;
   left: 10%;
   width: 25rem;
-  height: 16rem;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -329,10 +380,12 @@ body {
 }
 
 .movie-card__title {
-  font-size: 2.5rem;
+  width: 100%;
+  margin-left: -2rem;
 }
 
 .movie-card__description {
+  margin: 1rem 0;
   font-size: 1.3rem;
 }
 
@@ -387,9 +440,28 @@ body {
   max-height: 100vh;
 }
 
+.movieInfo {
+  position: absolute;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: black;
+  color: whitesmoke;
+  width: 70%;
+  max-width: 100rem;
+  top: 10%;
+}
+
+.movieInfo-hide {
+  display: none;
+}
+
 .videoPreview {
-  border: 1px solid orange;
-  color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -422,8 +494,51 @@ body {
   max-height: 100vh;
 }
 
+.videoPreview__close-window {
+  background-color: rgba(128, 128, 128, 0.678);
+  right: 2%;
+  position: absolute;
+  top: 1%;
+  font-size: 15px;
+}
+
+.videoPreview__controlePanel {
+  position: absolute;
+  width: 20rem;
+  bottom: 16%;
+  margin-left: 2.5%;
+}
+
+.videoPreview__title {
+  width: 100%;
+}
+
+.videoPreview__playButton {
+  width: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.videoPreview .far {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.602);
+}
+
+.videoPreview .far:hover {
+  color: #8ceb10;
+  cursor: pointer;
+}
+
 .videoPreviewText {
   height: 30%;
+  background: -webkit-linear-gradient(black 25%, #383838);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -431,6 +546,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-left: 50px;
+  padding-bottom: 20px;
 }
 
 .videoPreviewText__1 {
@@ -438,44 +555,108 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: 50%;
+  margin-top: 20px;
 }
 
 .videoPreviewText__1-1 {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   width: 60%;
 }
 
+.videoPreviewText__1-1 p {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.videoPreviewText__1-1 span {
+  color: #8ceb10;
+}
+
+.videoPreviewText__1-1 #SamenvattingFilm {
+  font-size: 15px;
+}
+
 .videoPreviewText__1-2 {
-  border: 1px solid lime;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   width: 40%;
+  padding-left: 50px;
+}
+
+.videoPreviewText__1-2 p {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.videoPreviewText__1-2 span {
+  color: grey;
 }
 
 .videoPreviewText__2 {
-  border: 1px solid blue;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   height: 50%;
+  margin-top: 20px;
 }
 
-.movieInfo {
-  position: absolute;
-  z-index: 20;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: red;
-  color: grey;
-  width: 70%;
-  max-width: 100rem;
-  height: 80rem;
-  margin-top: 50%;
+.videoPreviewText__2 p {
+  margin-bottom: 7px;
+  font-size: 11px;
 }
 
-.movieInfo-hide {
-  display: none;
+.videoPreviewText__2 span {
+  color: #9b9b9b;
+}
+
+@media only screen and (max-width: 600px) {
+  .preview {
+    min-height: 30rem;
+  }
+  .movie-card {
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+  }
+  .movie-card__description {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .videoPreviewText__1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .videoPreviewText__1-2 {
+    padding-left: 0;
+  }
+  .videoPreview__controlePanel {
+    width: 10rem;
+  }
+}
+
+.movieLane {
+  border: solid 1px red;
+  width: 90%;
+  margin: 1.3rem 0;
+}
+
+.movieLane .movieLaneCard {
+  border: solid blue 1px;
+  width: 35%;
+  max-width: 45rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.movieLane .movieLaneCard img {
+  width: 100%;
+  size: cover;
 }
 /*# sourceMappingURL=styles.css.map */
