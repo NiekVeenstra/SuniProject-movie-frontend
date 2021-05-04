@@ -9,10 +9,12 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   background-color: black;
+  height: 100%;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
+  height: 100%;
 }
 
 .link {
@@ -440,9 +442,28 @@ body {
   max-height: 100vh;
 }
 
-.movieInfo {
+.movieInfo-container {
   position: absolute;
+  width: 100%;
+  height: auto;
   z-index: 5;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.712);
+}
+
+.movieInfo {
+  position: relative;
+  margin: 5% 0 20% 0;
+  z-index: 6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -453,8 +474,12 @@ body {
   background-color: black;
   color: whitesmoke;
   width: 70%;
-  max-width: 100rem;
-  top: 10%;
+  -webkit-transition: width 0.2s ease-in-out 0s;
+  transition: width 0.2s ease-in-out 0s;
+}
+
+.movieInfo:hover {
+  width: 80%;
 }
 
 .movieInfo-hide {
@@ -495,11 +520,14 @@ body {
 }
 
 .videoPreview__close-window {
-  background-color: rgba(128, 128, 128, 0.678);
-  right: 2%;
+  right: 0.5rem;
   position: absolute;
-  top: 1%;
+  top: 0.5rem;
   font-size: 15px;
+  color: rgba(255, 255, 255, 0.705);
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .videoPreview__controlePanel {
@@ -623,6 +651,10 @@ body {
   }
   .movie-card__description {
     display: none;
+  }
+  .movieInfo {
+    width: 100%;
+    margin: 0;
   }
 }
 
