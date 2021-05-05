@@ -15,7 +15,6 @@ const DiscoverPreview = () => {
   const [fanArt2, setFanArt2] = useState("");
 
   const { setPlayVideo } = useContext(Context);
-  console.log(videoInfoID2.id);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,7 +22,6 @@ const DiscoverPreview = () => {
       const [movie] = await Promise.all([
         moviedb.get(`/discover/movie`),
       ]);
-      console.log(movie);
 
       setBackdrop(movie.data.results[0]);
       setVideoInfo(movie.data.results[0]);
@@ -42,8 +40,6 @@ const DiscoverPreview = () => {
         moviedb.get(`/movie/${videoInfoID2.id}/videos`),
         moviedb.get(`http://webservice.fanart.tv/v3/movies/${videoInfoID2.id}?api_key=00c655f5cf699862386184d892b7378f`),
       ]);
-
-      console.log(videoPrev);
 
       setVideoPrev2(videoPrev.data[1].href);
       setPlayVideo(videoPrev.data[1].href);
