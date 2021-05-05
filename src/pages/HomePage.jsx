@@ -7,8 +7,8 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <DiscoverPreview />
-      {/* <MovieLane/>
-      <MovieLane/> */}
+      <MovieLane/>
+      <MovieLane/>
       <div className="box"></div>
     </div>
   );
