@@ -1,14 +1,18 @@
 .movieLane{
     border: solid 1px red;
     width: 90%;
+    height: 30rem;;
     margin: 1.3rem 0;
-
+    display: flex;
+    overflow-x: auto;
+    // &::-webkit-scrollbar {    display: none;}
     .movieLaneCard{
         border: solid blue 1px;
-        width: 35%;
-        max-width: 45rem;
-        padding: 1rem;
-        position: relative;
+        // width: 50%;
+        // height: 10%;
+        // max-width: 45rem;
+        // padding: 1rem;
+        // position: relative;
         img{
             width: 100%;
             size: cover;

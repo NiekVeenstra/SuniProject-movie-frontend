@@ -1,9 +1,9 @@
 import React from 'react'
 
-const MovieLaneCard = ({backdrop, name}) => {
+const MovieLaneCard = ({backdropPath, name}) => {
     return (
         <div className="movieLaneCard">
-            <img src={backdrop} alt=""/>
+            <img src={backdropPath} alt=""/>
             <h1>{name}</h1>
         </div>
     )
