@@ -474,12 +474,35 @@ body {
   background-color: black;
   color: whitesmoke;
   width: 70%;
-  -webkit-transition: width 0.2s ease-in-out 0s;
-  transition: width 0.2s ease-in-out 0s;
 }
 
-.movieInfo:hover {
-  width: 80%;
+.animation {
+  -webkit-animation: sampleanimation 0.5s forwards;
+          animation: sampleanimation 0.5s forwards;
+}
+
+@-webkit-keyframes sampleanimation {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes sampleanimation {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    width: 80%;
+  }
 }
 
 .movieInfo-hide {
@@ -594,6 +617,7 @@ body {
 .videoPreviewText__1-1 p {
   margin-bottom: 10px;
   font-size: 12px;
+  max-width: 30rem;
 }
 
 .videoPreviewText__1-1 span {

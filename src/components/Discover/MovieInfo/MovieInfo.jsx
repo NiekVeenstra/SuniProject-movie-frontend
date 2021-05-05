@@ -32,7 +32,7 @@ const MovieInfo = ({ videoInfo, videoInfoID2, fanArt2, videoPrev2 }) => {
     <div className="movieInfo-container" onClick={closeWindowHandler}>
       <div
         onClick={(e) => e.stopPropagation()}
-        className={moreInfo ? "movieInfo" : "movieInfo-hide"}
+        className={moreInfo ? "movieInfo animation" : "movieInfo-hide"}
       >
         <VideoPreview fanArt2={fanArt2} videoPrev2={videoPrev2} />
         <VideoPreviewText
