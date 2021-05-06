@@ -17,13 +17,21 @@ const MovieLane = () => {
       setVideoInfo(movies.data.results);
 
       setIsLoading(false);
-      console.log(movies.data);
     };
 
     fetchData();
   }, []);
+
+
+  const horizontalScrollHandler = () => {
+    // console.log(e);
+    document.getElementById('movieLane').scrollLeft += 1000;
+  }
+
+
   return (
-    <div className="movieLane">
+    <div className="movieLane" id="movieLane">
+      <button onClick={horizontalScrollHandler}>test</button>
       {videoInfo.slice(0, 9).map((movie) => (
         <MovieLaneCard
           nr={n+=1}

@@ -8,7 +8,6 @@ const HomePage = () => {
     <div className="home-page">
       <DiscoverPreview />
       <MovieLane/>
-      <MovieLane/>
       <div className="box"></div>
     </div>
   );
