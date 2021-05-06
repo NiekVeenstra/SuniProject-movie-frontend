@@ -3,10 +3,9 @@ import moviedb from "../../../apis/theMovieDB";
 import MovieLaneCard from "./MovieLaneCard";
 
 const MovieLane = () => {
-  const [backdrop, setBackdrop] = useState({});
   const [videoInfo, setVideoInfo] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
+  let n=0;
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
@@ -18,17 +17,19 @@ const MovieLane = () => {
       setVideoInfo(movies.data.results);
 
       setIsLoading(false);
-      console.log(movies.data.results);
+      console.log(movies.data);
     };
 
     fetchData();
   }, []);
   return (
     <div className="movieLane">
-      {videoInfo.map((movie) => (
-        <MovieLaneCard 
+      {videoInfo.slice(0, 10).map((movie) => (
+        <MovieLaneCard
+          nr={n+=1}
           key={movie.title}
           backdropPath={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
+          posterPath={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
           name={movie.title}
         />
       ))}

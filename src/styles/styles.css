@@ -698,22 +698,18 @@ body {
 }
 
 .movieLane {
-  border: solid 1px red;
+  border: solid blue 1px;
   width: 90%;
-  height: 30rem;
   margin: 1.3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow-x: auto;
+  overflow: hidden;
 }
 
 .movieLane .movieLaneCard {
-  border: solid blue 1px;
-}
-
-.movieLane .movieLaneCard img {
-  width: 100%;
-  size: cover;
+  border: red solid 1px;
+  width: 30rem;
+  height: 30rem;
 }
 /*# sourceMappingURL=styles.css.map */
