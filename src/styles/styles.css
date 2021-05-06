@@ -698,18 +698,80 @@ body {
 }
 
 .movieLane {
-  border: solid blue 1px;
   width: 90%;
   margin: 1.3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .movieLane .movieLaneCard {
-  border: red solid 1px;
-  width: 30rem;
-  height: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.movieLane .movieLaneCard .number {
+  font-size: 10rem;
+  color: white;
+}
+
+.movieLane .movieLaneCard .svgnumber {
+  width: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.movieLane .movieLaneCard .svgnumber .div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.movieLane .movieLaneCard .svgnumber .place {
+  font: bold 90rem Century Gothic, Arial;
+  width: 100%;
+  height: 200%;
+  padding-top: 30rem;
+}
+
+.movieLane .movieLaneCard .svgnumber .place text {
+  fill: black;
+  stroke: white;
+  stroke-width: 1.5px;
+  stroke-linejoin: round;
+  -webkit-animation: 2s pulsate infinite;
+          animation: 2s pulsate infinite;
+}
+
+@-webkit-keyframes pulsate {
+  50% {
+    stroke-width: 5px;
+  }
+}
+
+@keyframes pulsate {
+  50% {
+    stroke-width: 5px;
+  }
+}
+
+.movieLane .movieLaneCard .movieImage .poster {
+  width: 25rem;
+  margin-left: -3.5rem;
 }
 /*# sourceMappingURL=styles.css.map */

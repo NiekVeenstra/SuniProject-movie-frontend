@@ -24,7 +24,7 @@ const MovieLane = () => {
   }, []);
   return (
     <div className="movieLane">
-      {videoInfo.slice(0, 10).map((movie) => (
+      {videoInfo.slice(0, 9).map((movie) => (
         <MovieLaneCard
           nr={n+=1}
           key={movie.title}
