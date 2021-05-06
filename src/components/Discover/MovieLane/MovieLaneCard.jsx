@@ -1,7 +1,6 @@
 import React from "react";
 
 const MovieLaneCard = ({ backdropPath, posterPath, name, nr }) => {
-  console.log(nr);
   return (
     <div className="movieLaneCard">
       <div className="svgnumber">
