@@ -697,14 +697,26 @@ body {
   }
 }
 
-.movieLane {
+.movieLane-outer {
   width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.movieLane {
+  width: 100%;
   margin: 1.3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
+  position: relative;
+}
+
+.movieLane::-webkit-scrollbar {
+  display: none;
 }
 
 .movieLane .movieLaneCard {
