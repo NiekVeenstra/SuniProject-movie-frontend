@@ -13,7 +13,12 @@ const MovieInfo = ({ videoInfo, videoInfoID2, fanArt2, videoPrev2 }) => {
   const [language, setLanguage] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const [Info2] = await Promise.all([theMovieDB.get(`/movie/${videoInfoID2.id}`)]);
+      const [Info2] = await Promise.all([
+        // backend
+        // theMovieDB.get(`/movie/${videoInfoID2.id}`)
+        // api
+        theMovieDB.get(`/movie/${videoInfoID2.id}?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`),
+      ]);
       setVideoInfo2(Info2.data);
       setVideoInfoGenres1(Info2.data.genres[0]);
       setVideoInfoGenres2(Info2.data.genres[1]);
