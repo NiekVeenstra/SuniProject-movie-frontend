@@ -167,7 +167,7 @@
   flex-direction: column;
   background-color: rgb(0, 0, 0);
   color: whitesmoke;
-  width: 70%;
+  width: 80%;
   // transition: all 0.5s;
 }
 
@@ -178,12 +178,14 @@
 @keyframes sampleanimation {
   0% {
     opacity: 0;
+    transform: scale(0);
   }
   75% {
     opacity: 1;
   }
   100% {
-    width: 80%;
+    // width: 80%;
+    transform: scale(1);
   }
 }
 

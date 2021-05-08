@@ -473,7 +473,7 @@ body {
           flex-direction: column;
   background-color: black;
   color: whitesmoke;
-  width: 70%;
+  width: 80%;
 }
 
 .animation {
@@ -484,24 +484,30 @@ body {
 @-webkit-keyframes sampleanimation {
   0% {
     opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   75% {
     opacity: 1;
   }
   100% {
-    width: 80%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes sampleanimation {
   0% {
     opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   75% {
     opacity: 1;
   }
   100% {
-    width: 80%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -697,14 +703,47 @@ body {
   }
 }
 
-.movieLane {
+.movieLane-outer {
   width: 90%;
-  margin: 1.3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid blue 1px;
+}
+
+.movieLane-outer__button-back, .movieLane-outer__button-forth {
+  height: 35rem;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 5rem;
+  z-index: 1;
+}
+
+.movieLane-outer__button-back:hover, .movieLane-outer__button-forth:hover {
+  background-color: grey;
+}
+
+.movieLane {
+  border: solid red 1px;
+  width: 100%;
+  margin: 1.3rem -10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
+  position: relative;
+}
+
+.movieLane::-webkit-scrollbar {
+  display: none;
 }
 
 .movieLane .movieLaneCard {
