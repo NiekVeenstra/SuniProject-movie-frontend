@@ -1,9 +1,10 @@
 .movieLane-outer {
+  margin-top: -15%;
   width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: solid blue 1px;
+  // border: solid blue 1px;
   &__button-back,
   &__button-forth {
     height: 35rem;
@@ -13,19 +14,29 @@
     color: white;
     font-size: 5rem;
     z-index: 1;
+    transform: scale(1);
+    cursor: pointer;
     &:hover{
-      background-color: grey;
+      background-color: rgba(0, 0, 0, 0.315);
+      transform: scale(1.2);
     }
+  }
+  &__button-back{
+    padding-right:1.3rem;
+  }
+  &__button-left{
+    padding-left:1.3rem;
   }
 }
 .movieLane {
-  border: solid red 1px;
+  // border: solid red 1px;
   width: 100%;
   margin: 1.3rem -10%;
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
   position: relative;
+  scroll-behavior: smooth;
   &::-webkit-scrollbar {
     display: none;
   }
