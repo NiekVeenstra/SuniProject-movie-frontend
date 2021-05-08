@@ -18,8 +18,10 @@ const VideoPreview = ({ fanArt2, videoPrev2 }) => {
           muted={mute}
           controls={true}
           loop={true}
-          // url="https://www.youtube.com/embed/odM92ap8_c0"
-          url={videoPrev2}
+          // backend
+          // url={videoPrev2.key}
+          // api
+          url={`https://www.youtube.com/watch?v=${videoPrev2.key}`}
         ></ReactPlayer>
         <button className="videoPreview__close-window" onClick={() => setMoreInfo(!moreInfo)}>
           <strong>X</strong>

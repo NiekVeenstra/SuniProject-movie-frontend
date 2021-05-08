@@ -22,18 +22,52 @@ const MovieLane = () => {
     fetchData();
   }, []);
 
-  window.addEventListener("resize", function () {
-    let screenwidth = document.body.clientWidth;
-    return screenwidth;
-  });
+  // window.addEventListener("resize", function () {
+  //   let screenwidth = document.body.clientWidth;
+  //   return screenwidth;
+  // });
+
+  // const horizontalScrollHandlerLeft = () => {
+  //   // console.log(e);
+  //   document.getElementById("movieLane").scrollLeft -= 1000;
+  // };
+  // const horizontalScrollHandlerRight = () => {
+  //   // console.log(e);
+  //   document.getElementById("movieLane").scrollLeft += 1000;
+  // };
+
+  const getWidth = () =>
+    window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  function useCurrentWidth() {
+    // save current window width in the state object
+    let [width, setWidth] = useState(getWidth());
+    // in this case useEffect will execute only once because
+    // it does not have any dependencies.
+    useEffect(() => {
+      const resizeListener = () => {
+        // change width from the state object
+        setWidth(getWidth());
+      };
+      // set resize listener
+      window.addEventListener("resize", resizeListener);
+
+      // clean up function
+      return () => {
+        // remove resize listener
+        window.removeEventListener("resize", resizeListener);
+      };
+    }, []);
+
+    return width;
+  }
+  let width = useCurrentWidth();
 
   const horizontalScrollHandlerLeft = () => {
-    // console.log(e);
-    document.getElementById("movieLane").scrollLeft -= 1000;
+    document.getElementById("movieLane").scrollLeft -= width / 2;
   };
   const horizontalScrollHandlerRight = () => {
-    // console.log(e);
-    document.getElementById("movieLane").scrollLeft += 1000;
+    document.getElementById("movieLane").scrollLeft += width / 2;
   };
 
   return (
