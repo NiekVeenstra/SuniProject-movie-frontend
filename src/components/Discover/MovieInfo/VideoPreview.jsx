@@ -16,7 +16,7 @@ const VideoPreview = ({ fanArt2, videoPrev2 }) => {
           height="100%"
           playing={true}
           muted={mute}
-          controls={true}
+          controls={false}
           loop={true}
           // backend
           // url={videoPrev2.key}

@@ -72,8 +72,11 @@ const MovieLane = () => {
 
   return (
     <div className="movieLane-outer">
-      <button onClick={horizontalScrollHandlerLeft} style={{ height: "10%" }}>
-        left
+      <button
+        onClick={horizontalScrollHandlerLeft}
+        className="movieLane-outer__button movieLane-outer__button-back"
+      >
+        <i class="fas fa-angle-left"></i>
       </button>
       <div className="movieLane" id="movieLane">
         {videoInfo.slice(0, 9).map((movie) => (
@@ -86,8 +89,11 @@ const MovieLane = () => {
           />
         ))}
       </div>
-      <button onClick={horizontalScrollHandlerRight} style={{ height: "10%" }}>
-        right
+      <button
+        onClick={horizontalScrollHandlerRight}
+        className="movieLane-outer__button movieLane-outer__button-forth"
+      >
+        <i class="fas fa-angle-right"></i>
       </button>
     </div>
   );
