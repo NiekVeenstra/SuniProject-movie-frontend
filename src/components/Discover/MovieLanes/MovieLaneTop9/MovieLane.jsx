@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import moviedb from "../../../apis/theMovieDB";
+import moviedb from "../../../../apis/theMovieDB";
 import MovieLaneCard from "./MovieLaneCard";
 
 const MovieLane = () => {

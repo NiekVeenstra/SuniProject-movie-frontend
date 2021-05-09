@@ -1,6 +1,6 @@
 import React from "react";
 import DiscoverPreview from "../components/Discover/DiscoverPreview";
-import MovieLane from "../components/Discover/MovieLane/MovieLane";
+import MovieLane from "../components/Discover/MovieLanes/MovieLaneTop9/MovieLane";
 
 
 const HomePage = () => {
