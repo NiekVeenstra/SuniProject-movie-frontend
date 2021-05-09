@@ -16,16 +16,16 @@
     z-index: 1;
     transform: scale(1);
     cursor: pointer;
-    &:hover{
+    &:hover {
       background-color: rgba(0, 0, 0, 0.315);
       transform: scale(1.2);
     }
   }
-  &__button-back{
-    padding-right:1.3rem;
+  &__button-back {
+    padding-right: 1.3rem;
   }
-  &__button-left{
-    padding-left:1.3rem;
+  &__button-left {
+    padding-left: 1.3rem;
   }
 }
 .movieLane {
@@ -90,104 +90,17 @@
   }
 }
 
-// .movieLane {
-//   border: solid blue 1px;
-//   width: 90%;
-//   margin: 1.3rem 0;
-//   display: flex;
-//   overflow-x: scroll;
-
-//   .movieLaneCard {
-//     // width: 30rem;
-//     // height: 30rem;
-//     border: rgb(255, 0, 212) solid 1px;
-//     display: flex;
-//     position: relative;
-
-//     .svgNumber {
-//       width: 100%;
-//       height: 100%;
-//         position: absolute;
-//       //   left: -100px;
-//       .place {
-//         font: bold 70rem Century Gothic, Arial;
-//         width: 100%;
-//         height: 100%;
-//       }
-
-//       text {
-//         fill: black;
-//         stroke: rgb(255, 255, 255);
-//         stroke-width: 1.5px;
-//         stroke-linejoin: round;
-//         animation: 2s pulsate infinite;
-//       }
-
-//       @keyframes pulsate {
-//         50% {
-//           stroke-width: 5px;
-//         }
-//       }
-//     }
-
-//     .movieImage {
-//       width: 100%;
-//       .poster {
-//         object-fit: cover;
-//         width: 100%;
-//       }
-//     }
-//   }
-// }
-
-// .movieLane {
-//   width: 90vw;
-//   height: auto;
-//   margin: 1.3rem 0;
-//   display: flex;
-//   overflow-x: scroll;
-//   // &::-webkit-scrollbar {    display: none;}
-//   border: solid rgb(0, 38, 255) 1px;
-
-//   .movieLaneCard {
-//     height: 25rem;
-//     // width: 25rem;
-//     // position: relative;
-//     border: solid red 1px;
-//     .svgNumber {
-//       width: 100%;
-//       height: 120%;
-//       border: solid 2px green;
-//     //   position: absolute;
-//     //   left: -100px;
-//       .place {
-//         font: bold 70rem Century Gothic, Arial;
-//         width: 100%;
-//         height: 100%;
-//         border: solid blue 1px;
-//       }
-
-//       text {
-//         fill: black;
-//         stroke: rgb(255, 255, 255);
-//         stroke-width: 1.5px;
-//         stroke-linejoin: round;
-//         // animation       : 2s pulsate infinite;
-//       }
-
-//       @keyframes pulsate {
-//         50% {
-//           stroke-width: 5px;
-//         }
-//       }
-//     }
-//     .movieImage {
-//       .poster {
-//         width: 100px;
-//         height: 100px;
-//         size: cover;
-//         // position: absolute;
-//       }
-//     }
-//   }
-// }
+@media only screen and (max-width: 1000px) {
+  .movieLane {
+    .movieLaneCard {
+      .svgnumber{
+        width: 5rem;
+      }
+      .movieImage {
+        .poster {
+          width: 15rem;
+        }
+      }
+    }
+  }
+}

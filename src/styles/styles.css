@@ -668,20 +668,6 @@ body {
   .preview {
     min-height: 30rem;
   }
-  .movie-card {
-    top: 20%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: auto;
-  }
-  .movie-card__description {
-    display: none;
-  }
   .movieInfo {
     width: 100%;
     margin: 0;
@@ -700,6 +686,23 @@ body {
   }
   .videoPreview__controlePanel {
     width: 10rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .movie-card {
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+  }
+  .movie-card__description {
+    display: none;
   }
 }
 
@@ -825,5 +828,14 @@ body {
 .movieLane .movieLaneCard .movieImage .poster {
   width: 25rem;
   margin-left: -3.5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .movieLane .movieLaneCard .svgnumber {
+    width: 5rem;
+  }
+  .movieLane .movieLaneCard .movieImage .poster {
+    width: 15rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
