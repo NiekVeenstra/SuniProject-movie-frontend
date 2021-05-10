@@ -1,8 +1,8 @@
 import React from "react";
 
-const MovieLaneCard = ({ backdropPath, posterPath, name, nr }) => {
+const MovieLaneCardTop9 = ({ backdropPath, posterPath, name, nr }) => {
   return (
-    <div className="movieLaneCard">
+    <div className="movieLaneCardTop9">
       <div className="svgnumber">
         <div className="div">
           <svg className="place" viewBox="0 0 450 50">
@@ -18,4 +18,4 @@ const MovieLaneCard = ({ backdropPath, posterPath, name, nr }) => {
   );
 };
 
-export default MovieLaneCard;
+export default MovieLaneCardTop9;
