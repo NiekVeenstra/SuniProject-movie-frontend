@@ -168,7 +168,9 @@
   background-color: rgb(0, 0, 0);
   color: whitesmoke;
   width: 80%;
+  max-width: 100rem;
   // transition: all 0.5s;
+  // border: solid red 5px
 }
 
 .animation {
@@ -283,7 +285,7 @@
     p {
       margin-bottom: 10px;
       font-size: 12px;
-      max-width: 30rem;
+      // max-width: 30rem;
     }
     span {
       color: rgb(140, 235, 16);

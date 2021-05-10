@@ -474,6 +474,7 @@ body {
   background-color: black;
   color: whitesmoke;
   width: 80%;
+  max-width: 100rem;
 }
 
 .animation {
@@ -623,7 +624,6 @@ body {
 .videoPreviewText__1-1 p {
   margin-bottom: 10px;
   font-size: 12px;
-  max-width: 30rem;
 }
 
 .videoPreviewText__1-1 span {
