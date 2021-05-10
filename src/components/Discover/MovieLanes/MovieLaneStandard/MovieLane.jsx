@@ -2,21 +2,27 @@ import React, { useEffect, useState } from "react";
 import moviedb from "../../../../apis/theMovieDB";
 import MovieLaneCard from "../MovieLaneStandard/MovieLaneCard";
 
-const MovieLane = ({genre}) => {
+const MovieLane = ({ genreName, genre, idd }) => {
   const [videoInfo, setVideoInfo] = useState([]);
+  const [videoInfo2, setVideoInfo2] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   let n = 0;
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
-      const [movies] = await Promise.all([
+      const [movies, movies2] = await Promise.all([
         moviedb.get(
-          `/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&${genre}`
+          `/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&${genre}&page=1`
+        ),
+        moviedb.get(
+          `/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&${genre}&page=2`
         ),
       ]);
-      console.log(movies.data.results);
+      console.log(movies.data);
+      console.log(movies2.data);
       // setBackdrop(movie.data.results[0].backdrop_path);
       setVideoInfo(movies.data.results);
+      setVideoInfo2(movies2.data.results);
 
       setIsLoading(false);
     };
@@ -52,10 +58,10 @@ const MovieLane = ({genre}) => {
   let width = useCurrentWidth();
 
   const horizontalScrollHandlerLeft = () => {
-    document.getElementById("movieLane").scrollLeft -= width / 2;
+    document.getElementById(`movieLane${idd}`).scrollLeft -= width / 2;
   };
   const horizontalScrollHandlerRight = () => {
-    document.getElementById("movieLane").scrollLeft += width / 2;
+    document.getElementById(`movieLane${idd}`).scrollLeft += width / 2;
   };
 
   return (
@@ -66,12 +72,22 @@ const MovieLane = ({genre}) => {
       >
         <i class="fas fa-angle-left"></i>
       </button>
-      <div className="movieLane" id="movieLane">
-        {videoInfo.slice(0, 9).map((movie) => (
-          <MovieLaneCard 
-          backdropPath={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
+      <div className="movieLane-inner">
+      <h1 style={{ color: "white" }}>{genreName}</h1>
+      <div className="movieLane" id={`movieLane${idd}`}>
+        {videoInfo.slice(0, 20).map((movie) => (
+          <MovieLaneCard
+            backdropPath={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
+            name={movie.title}
           />
         ))}
+        {videoInfo2.slice(0, 20).map((movie) => (
+          <MovieLaneCard
+            backdropPath={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
+            name={movie.title}
+          />
+        ))}
+      </div>
       </div>
       <button
         onClick={horizontalScrollHandlerRight}
