@@ -50,7 +50,6 @@ const DiscoverPreview = () => {
           `http://webservice.fanart.tv/v3/movies/${videoInfoID2.id}?api_key=00c655f5cf699862386184d892b7378f`
         ),
       ]);
-      console.log(videoPrev.data.results);
       // backend
       // setVideoPrev2(videoPrev.data[1].href);
       // setPlayVideo(videoPrev.data[1].href);
