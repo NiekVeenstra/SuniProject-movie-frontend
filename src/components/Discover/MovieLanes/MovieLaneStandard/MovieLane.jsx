@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import moviedb from "../../../../apis/theMovieDB";
-import MovieLaneCard from "../MovieLaneTop9/MovieLaneCardTop9";
+import MovieLaneCard from "../MovieLaneStandard/MovieLaneCard";
 
-const MovieLane = () => {
+const MovieLane = ({genre}) => {
   const [videoInfo, setVideoInfo] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   let n = 0;
@@ -11,7 +11,7 @@ const MovieLane = () => {
       setIsLoading(true);
       const [movies] = await Promise.all([
         moviedb.get(
-          `/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22`
+          `/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&${genre}`
         ),
       ]);
       console.log(movies.data.results);
@@ -23,20 +23,6 @@ const MovieLane = () => {
 
     fetchData();
   }, []);
-
-  // window.addEventListener("resize", function () {
-  //   let screenwidth = document.body.clientWidth;
-  //   return screenwidth;
-  // });
-
-  // const horizontalScrollHandlerLeft = () => {
-  //   // console.log(e);
-  //   document.getElementById("movieLane").scrollLeft -= 1000;
-  // };
-  // const horizontalScrollHandlerRight = () => {
-  //   // console.log(e);
-  //   document.getElementById("movieLane").scrollLeft += 1000;
-  // };
 
   const getWidth = () =>
     window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -82,7 +68,9 @@ const MovieLane = () => {
       </button>
       <div className="movieLane" id="movieLane">
         {videoInfo.slice(0, 9).map((movie) => (
-          <MovieLaneCard />
+          <MovieLaneCard 
+          backdropPath={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
+          />
         ))}
       </div>
       <button

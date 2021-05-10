@@ -1,4 +1,4 @@
-.movieLane-outer {
+.movieLane-outer-Top9 {
   margin-top: -15%;
   width: 90%;
   display: flex;
@@ -28,7 +28,7 @@
     padding-left: 1.3rem;
   }
 }
-.movieLane {
+.movieLaneTop9 {
   // border: solid red 1px;
   width: 100%;
   margin: 1.3rem -10%;
@@ -40,7 +40,7 @@
   &::-webkit-scrollbar {
     display: none;
   }
-  .movieLaneCard {
+  .movieLaneCardTop9 {
     //   width: 30rem;
     display: flex;
     .number {

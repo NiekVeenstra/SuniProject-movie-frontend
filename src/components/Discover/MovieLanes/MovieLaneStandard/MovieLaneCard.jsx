@@ -1,9 +1,9 @@
 import React from 'react'
 
-const MovieLaneCard = () => {
+const MovieLaneCard = ({backdropPath}) => {
     return (
         <div>
-            <h1>card</h1>
+            <img src={backdropPath} alt="" style={{height: "10%"}} />
         </div>
     )
 }
