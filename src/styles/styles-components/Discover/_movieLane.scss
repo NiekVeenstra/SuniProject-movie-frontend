@@ -94,7 +94,12 @@
   .movieLane {
     .movieLaneCard {
       .svgnumber{
-        width: 5rem;
+        width: 10rem;
+        .place{
+          height: 200%;
+          padding: 10rem 2rem 0 0;
+          // z-index: 2;
+        }
       }
       .movieImage {
         .poster {
