@@ -32,7 +32,6 @@ const HomePage = () => {
       <MovieLane idd="9" genreName="Familie" genre="with_genres=10751" />
       <MovieLane idd="10" genreName="Fantasie" genre="with_genres=14" />
       <MovieLane idd="11" genreName="Avontuur" genre="with_genres=12" />
-      <div className="box"></div>
     </div>
   );
 };
