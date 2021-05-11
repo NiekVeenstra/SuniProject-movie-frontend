@@ -8,9 +8,7 @@
   &__button-back,
   &__button-forth {
     height: 20rem;
-    // width: 10%;
     border: none;
-    // border: solid blue 1px;
     background: transparent;
     color: white;
     font-size: 5rem;
@@ -22,21 +20,12 @@
       transform: scale(1.2);
     }
   }
-//   &__button-back {
-//     // padding-right: 1.3rem;
-//   }
-  //   &__button-left {
-  //     padding-left: 1.3rem;
-  //   }
 }
 .movieLane-inner {
   width: 95%;
-//   border: solid red 1px;
 }
 .movieLane {
-//   border: solid blue 1px;
   width: 100%;
-  //   margin: 1.3rem -10%;
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -47,12 +36,29 @@
   }
 }
 .movieLaneCard {
-  //   width: 30rem;
   display: flex;
+  cursor: pointer;
   &__movieImage {
     padding-left: 1rem;
   }
   &__img {
     width: 30rem;
+  }
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .movieLane-outer {
+    width: 100%;
+    &__button-back,
+    &__button-forth {
+      font-size: 3rem;
+      display: none;
+    }
+  }
+  .movieLane-inner {
+    width: 100%;
   }
 }

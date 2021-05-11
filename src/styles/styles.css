@@ -747,7 +747,7 @@ body {
 }
 
 .movieLaneTop9 {
-  width: 100%;
+  width: 95%;
   margin: 1.3rem -10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -898,6 +898,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
 }
 
 .movieLaneCard__movieImage {
@@ -906,5 +907,23 @@ body {
 
 .movieLaneCard__img {
   width: 30rem;
+}
+
+.movieLaneCard:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@media only screen and (max-width: 700px) {
+  .movieLane-outer {
+    width: 100%;
+  }
+  .movieLane-outer__button-back, .movieLane-outer__button-forth {
+    font-size: 3rem;
+    display: none;
+  }
+  .movieLane-inner {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
