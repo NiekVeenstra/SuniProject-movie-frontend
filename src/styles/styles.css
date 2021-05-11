@@ -830,6 +830,20 @@ body {
   margin-left: -3.5rem;
 }
 
+@media only screen and (max-width: 700px) {
+  .movieLane-outer-Top9 {
+    width: 100%;
+  }
+  .movieLane-outer-Top9__button-back, .movieLane-outer-Top9__button-forth {
+    font-size: 3rem;
+    display: none;
+  }
+  .movieLane-outer-Top9 .movieLaneTop9 {
+    width: 100%;
+    margin: 1.3rem 0%;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .movieLaneTop9 .movieLaneCardTop9 .svgnumber {
     width: 10rem;
@@ -854,7 +868,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
 }
 
 .movieLane-outer__button-back, .movieLane-outer__button-forth {
@@ -924,6 +938,9 @@ body {
   }
   .movieLane-inner {
     width: 100%;
+  }
+  .movieLaneCard__img {
+    width: 20rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

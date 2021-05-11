@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
   // border: solid blue 1px;
   &__button-back,
   &__button-forth {
@@ -60,5 +60,10 @@
   }
   .movieLane-inner {
     width: 100%;
+  }
+  .movieLaneCard {
+    &__img {
+      width: 20rem;
+    }
   }
 }
