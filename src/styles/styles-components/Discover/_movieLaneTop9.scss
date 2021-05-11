@@ -30,7 +30,7 @@
 }
 .movieLaneTop9 {
   // border: solid red 1px;
-  width: 100%;
+  width: 95%;
   margin: 1.3rem -10%;
   display: flex;
   overflow-x: scroll;
@@ -83,9 +83,23 @@
     .movieImage {
       .poster {
         width: 25rem;
-        // height: 100%;
         margin-left: -3.5rem;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .movieLane-outer-Top9 {
+    width: 100%;
+    &__button-back,
+    &__button-forth {
+      font-size: 3rem;
+      display: none;
+    }
+    .movieLaneTop9 {
+      width: 100%;
+      margin: 1.3rem 0%;
     }
   }
 }
@@ -93,9 +107,9 @@
 @media only screen and (max-width: 1000px) {
   .movieLaneTop9 {
     .movieLaneCardTop9 {
-      .svgnumber{
+      .svgnumber {
         width: 10rem;
-        .place{
+        .place {
           height: 200%;
           padding: 10rem 2rem 0 0;
           // z-index: 2;
