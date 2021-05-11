@@ -24,12 +24,6 @@ const Menu = () => {
         </li>
         <li className="menu-container__li">
           {" "}
-          <Link className="menu-container__link" to="/discover">
-            Discover
-          </Link>
-        </li>
-        <li className="menu-container__li">
-          {" "}
           <Link className="menu-container__link" to="/movies">
             Movies
           </Link>
