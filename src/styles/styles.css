@@ -477,6 +477,23 @@ body {
   max-width: 100rem;
 }
 
+.movieInfoLane {
+  position: relative;
+  margin: 5% 0 20% 0;
+  z-index: 6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: black;
+  color: whitesmoke;
+  width: 80%;
+  max-width: 100rem;
+}
+
 .animation {
   -webkit-animation: sampleanimation 0.5s forwards;
           animation: sampleanimation 0.5s forwards;
