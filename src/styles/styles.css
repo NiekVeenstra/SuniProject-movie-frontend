@@ -764,7 +764,7 @@ body {
 }
 
 .movieLaneTop9 {
-  width: 100%;
+  width: 95%;
   margin: 1.3rem -10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -847,16 +847,117 @@ body {
   margin-left: -3.5rem;
 }
 
+@media only screen and (max-width: 700px) {
+  .movieLane-outer-Top9 {
+    width: 100%;
+  }
+  .movieLane-outer-Top9__button-back, .movieLane-outer-Top9__button-forth {
+    font-size: 3rem;
+    display: none;
+  }
+  .movieLane-outer-Top9 .movieLaneTop9 {
+    width: 100%;
+    margin: 1.3rem 0%;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
-  .movieLane .movieLaneCard .svgnumber {
+  .movieLaneTop9 .movieLaneCardTop9 .svgnumber {
     width: 10rem;
   }
-  .movieLane .movieLaneCard .svgnumber .place {
+  .movieLaneTop9 .movieLaneCardTop9 .svgnumber .place {
     height: 200%;
     padding: 10rem 2rem 0 0;
   }
-  .movieLane .movieLaneCard .movieImage .poster {
+  .movieLaneTop9 .movieLaneCardTop9 .movieImage .poster {
     width: 15rem;
+  }
+}
+
+.movieLane-outer {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.5rem;
+}
+
+.movieLane-outer__button-back, .movieLane-outer__button-forth {
+  height: 20rem;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 5rem;
+  z-index: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  cursor: pointer;
+}
+
+.movieLane-outer__button-back:hover, .movieLane-outer__button-forth:hover {
+  background-color: rgba(0, 0, 0, 0.315);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.movieLane-inner {
+  width: 95%;
+}
+
+.movieLane {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.movieLane::-webkit-scrollbar {
+  display: none;
+}
+
+.movieLaneCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.movieLaneCard__movieImage {
+  padding-left: 1rem;
+}
+
+.movieLaneCard__img {
+  width: 30rem;
+}
+
+.movieLaneCard:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@media only screen and (max-width: 700px) {
+  .movieLane-outer {
+    width: 100%;
+  }
+  .movieLane-outer__button-back, .movieLane-outer__button-forth {
+    font-size: 3rem;
+    display: none;
+  }
+  .movieLane-inner {
+    width: 100%;
+  }
+  .movieLaneCard__img {
+    width: 20rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
