@@ -5,7 +5,6 @@ import { Context } from "../../Context/Context";
 const PlayVideo = () => {
   const [mute] = useState(true);
   const { playVideo } = useContext(Context);
-  console.log(playVideo);
   return (
     <div className="play-video">
       <div className="play-video__container">
@@ -17,7 +16,10 @@ const PlayVideo = () => {
           muted={!mute}
           controls={true}
           loop={true}
-          url={playVideo}
+          // backend
+          // url={playVideo}
+          // api
+          url={`https://www.youtube.com/watch?v=${playVideo.key}`}
         ></ReactPlayer>
       </div>
     </div>

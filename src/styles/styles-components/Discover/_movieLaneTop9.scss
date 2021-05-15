@@ -1,0 +1,126 @@
+.movieLane-outer-Top9 {
+  margin-top: -15%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // border: solid blue 1px;
+  &__button-back,
+  &__button-forth {
+    height: 35rem;
+    // width: 10%;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 5rem;
+    z-index: 1;
+    transform: scale(1);
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.315);
+      transform: scale(1.2);
+    }
+  }
+  &__button-back {
+    padding-right: 1.3rem;
+  }
+  &__button-left {
+    padding-left: 1.3rem;
+  }
+}
+.movieLaneTop9 {
+  // border: solid red 1px;
+  width: 95%;
+  margin: 1.3rem -10%;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .movieLaneCardTop9 {
+    //   width: 30rem;
+    display: flex;
+    cursor: pointer;
+    .number {
+      font-size: 10rem;
+      color: white;
+    }
+    .svgnumber {
+      width: 15rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      .div {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      .place {
+        // border: solid red 1px;
+        font: bold 90rem Century Gothic, Arial;
+        width: 100%;
+        height: 200%;
+        padding-top: 30rem;
+        text {
+          fill: black;
+          stroke: rgb(255, 255, 255);
+          stroke-width: 1.5px;
+          stroke-linejoin: round;
+          animation: 2s pulsate infinite;
+        }
+      }
+    }
+
+    @keyframes pulsate {
+      50% {
+        stroke-width: 5px;
+      }
+    }
+
+    .movieImage {
+      .poster {
+        width: 25rem;
+        margin-left: -3.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .movieLane-outer-Top9 {
+    width: 100%;
+    &__button-back,
+    &__button-forth {
+      font-size: 3rem;
+      display: none;
+    }
+    .movieLaneTop9 {
+      width: 100%;
+      margin: 1.3rem 0%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .movieLaneTop9 {
+    .movieLaneCardTop9 {
+      .svgnumber {
+        width: 10rem;
+        .place {
+          height: 200%;
+          padding: 10rem 2rem 0 0;
+          // z-index: 2;
+        }
+      }
+      .movieImage {
+        .poster {
+          width: 15rem;
+        }
+      }
+    }
+  }
+}

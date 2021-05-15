@@ -9,10 +9,12 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   background-color: black;
+  height: 100%;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
+  height: 100%;
 }
 
 .link {
@@ -440,9 +442,28 @@ body {
   max-height: 100vh;
 }
 
-.movieInfo {
+.movieInfo-container {
   position: absolute;
+  width: 100%;
+  height: auto;
   z-index: 5;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.712);
+}
+
+.movieInfo {
+  position: relative;
+  margin: 5% 0 20% 0;
+  z-index: 6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -452,9 +473,60 @@ body {
           flex-direction: column;
   background-color: black;
   color: whitesmoke;
-  width: 70%;
+  width: 80%;
   max-width: 100rem;
-  top: 10%;
+}
+
+.movieInfoLane {
+  position: relative;
+  margin: 5% 0 20% 0;
+  z-index: 6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: black;
+  color: whitesmoke;
+  width: 80%;
+  max-width: 100rem;
+}
+
+.animation {
+  -webkit-animation: sampleanimation 0.5s forwards;
+          animation: sampleanimation 0.5s forwards;
+}
+
+@-webkit-keyframes sampleanimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes sampleanimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .movieInfo-hide {
@@ -495,11 +567,14 @@ body {
 }
 
 .videoPreview__close-window {
-  background-color: rgba(128, 128, 128, 0.678);
-  right: 2%;
+  right: 0.5rem;
   position: absolute;
-  top: 1%;
+  top: 0.5rem;
   font-size: 15px;
+  color: rgba(255, 255, 255, 0.705);
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .videoPreview__controlePanel {
@@ -610,19 +685,9 @@ body {
   .preview {
     min-height: 30rem;
   }
-  .movie-card {
-    top: 20%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: auto;
-  }
-  .movie-card__description {
-    display: none;
+  .movieInfo {
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -641,22 +706,259 @@ body {
   }
 }
 
-.movieLane {
-  border: solid 1px red;
+@media only screen and (max-width: 1000px) {
+  .movie-card {
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+  }
+  .movie-card__description {
+    display: none;
+  }
+}
+
+.movieLane-outer-Top9 {
+  margin-top: -15%;
   width: 90%;
-  margin: 1.3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.movieLane .movieLaneCard {
-  border: solid blue 1px;
-  width: 35%;
-  max-width: 45rem;
-  padding: 1rem;
+.movieLane-outer-Top9__button-back, .movieLane-outer-Top9__button-forth {
+  height: 35rem;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 5rem;
+  z-index: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  cursor: pointer;
+}
+
+.movieLane-outer-Top9__button-back:hover, .movieLane-outer-Top9__button-forth:hover {
+  background-color: rgba(0, 0, 0, 0.315);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.movieLane-outer-Top9__button-back {
+  padding-right: 1.3rem;
+}
+
+.movieLane-outer-Top9__button-left {
+  padding-left: 1.3rem;
+}
+
+.movieLaneTop9 {
+  width: 95%;
+  margin: 1.3rem -10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
   position: relative;
+  scroll-behavior: smooth;
 }
 
-.movieLane .movieLaneCard img {
+.movieLaneTop9::-webkit-scrollbar {
+  display: none;
+}
+
+.movieLaneTop9 .movieLaneCardTop9 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.movieLaneTop9 .movieLaneCardTop9 .number {
+  font-size: 10rem;
+  color: white;
+}
+
+.movieLaneTop9 .movieLaneCardTop9 .svgnumber {
+  width: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.movieLaneTop9 .movieLaneCardTop9 .svgnumber .div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.movieLaneTop9 .movieLaneCardTop9 .svgnumber .place {
+  font: bold 90rem Century Gothic, Arial;
   width: 100%;
-  size: cover;
+  height: 200%;
+  padding-top: 30rem;
+}
+
+.movieLaneTop9 .movieLaneCardTop9 .svgnumber .place text {
+  fill: black;
+  stroke: white;
+  stroke-width: 1.5px;
+  stroke-linejoin: round;
+  -webkit-animation: 2s pulsate infinite;
+          animation: 2s pulsate infinite;
+}
+
+@-webkit-keyframes pulsate {
+  50% {
+    stroke-width: 5px;
+  }
+}
+
+@keyframes pulsate {
+  50% {
+    stroke-width: 5px;
+  }
+}
+
+.movieLaneTop9 .movieLaneCardTop9 .movieImage .poster {
+  width: 25rem;
+  margin-left: -3.5rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .movieLane-outer-Top9 {
+    width: 100%;
+  }
+  .movieLane-outer-Top9__button-back, .movieLane-outer-Top9__button-forth {
+    font-size: 3rem;
+    display: none;
+  }
+  .movieLane-outer-Top9 .movieLaneTop9 {
+    width: 100%;
+    margin: 1.3rem 0%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .movieLaneTop9 .movieLaneCardTop9 .svgnumber {
+    width: 10rem;
+  }
+  .movieLaneTop9 .movieLaneCardTop9 .svgnumber .place {
+    height: 200%;
+    padding: 10rem 2rem 0 0;
+  }
+  .movieLaneTop9 .movieLaneCardTop9 .movieImage .poster {
+    width: 15rem;
+  }
+}
+
+.movieLane-outer {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.5rem;
+}
+
+.movieLane-outer__button-back, .movieLane-outer__button-forth {
+  height: 20rem;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 5rem;
+  z-index: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  cursor: pointer;
+}
+
+.movieLane-outer__button-back:hover, .movieLane-outer__button-forth:hover {
+  background-color: rgba(0, 0, 0, 0.315);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.movieLane-inner {
+  width: 95%;
+}
+
+.movieLane {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.movieLane::-webkit-scrollbar {
+  display: none;
+}
+
+.movieLaneCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.movieLaneCard__movieImage {
+  padding-left: 1rem;
+}
+
+.movieLaneCard__img {
+  width: 30rem;
+}
+
+.movieLaneCard:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@media only screen and (max-width: 700px) {
+  .movieLane-outer {
+    width: 100%;
+  }
+  .movieLane-outer__button-back, .movieLane-outer__button-forth {
+    font-size: 3rem;
+    display: none;
+  }
+  .movieLane-inner {
+    width: 100%;
+  }
+  .movieLaneCard__img {
+    width: 20rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

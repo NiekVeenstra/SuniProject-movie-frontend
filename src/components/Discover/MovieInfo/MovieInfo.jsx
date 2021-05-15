@@ -5,7 +5,7 @@ import VideoPreview from "./VideoPreview";
 import VideoPreviewText from "./VideoPreviewText";
 
 const MovieInfo = ({ videoInfo, videoInfoID2, fanArt2, videoPrev2 }) => {
-  const { moreInfo } = useContext(Context);
+  const { moreInfo, setMoreInfo } = useContext(Context);
   const [videoInfo2, setVideoInfo2] = useState({});
   const [videoInfoGenres1, setVideoInfoGenres1] = useState([]);
   const [videoInfoGenres2, setVideoInfoGenres2] = useState([]);
@@ -13,7 +13,12 @@ const MovieInfo = ({ videoInfo, videoInfoID2, fanArt2, videoPrev2 }) => {
   const [language, setLanguage] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const [Info2] = await Promise.all([theMovieDB.get(`/movie/${videoInfoID2.id}`)]);
+      const [Info2] = await Promise.all([
+        // backend
+        // theMovieDB.get(`/movie/${videoInfoID2.id}`)
+        // api
+        theMovieDB.get(`/movie/${videoInfoID2.id}?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`),
+      ]);
       setVideoInfo2(Info2.data);
       setVideoInfoGenres1(Info2.data.genres[0]);
       setVideoInfoGenres2(Info2.data.genres[1]);
@@ -24,17 +29,26 @@ const MovieInfo = ({ videoInfo, videoInfoID2, fanArt2, videoPrev2 }) => {
     fetchData();
   }, [videoInfoID2.id]);
 
+  const closeWindowHandler = (e) => {
+    setMoreInfo(!moreInfo);
+  };
+
   return (
-    <div className={moreInfo ? "movieInfo" : "movieInfo-hide"}>
-      <VideoPreview fanArt2={fanArt2} videoPrev2={videoPrev2} />
-      <VideoPreviewText
-        videoInfo={videoInfo}
-        videoInfo2={videoInfo2}
-        videoInfoGenres1={videoInfoGenres1}
-        videoInfoGenres2={videoInfoGenres2}
-        productionComp={productionComp}
-        language={language}
-      />
+    <div className="movieInfo-container" onClick={closeWindowHandler}>
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className={moreInfo ? "movieInfo animation" : "movieInfo-hide"}
+      >
+        <VideoPreview fanArt2={fanArt2} videoPrev2={videoPrev2} />
+        <VideoPreviewText
+          videoInfo={videoInfo}
+          videoInfo2={videoInfo2}
+          videoInfoGenres1={videoInfoGenres1}
+          videoInfoGenres2={videoInfoGenres2}
+          productionComp={productionComp}
+          language={language}
+        />
+      </div>
     </div>
   );
 };
