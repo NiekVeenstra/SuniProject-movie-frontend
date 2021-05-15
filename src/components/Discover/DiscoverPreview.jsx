@@ -54,8 +54,8 @@ const DiscoverPreview = () => {
       // setVideoPrev2(videoPrev.data[1].href);
       // setPlayVideo(videoPrev.data[1].href);
       // api
-      setVideoPrev2(videoPrev.data.results[5]);
-      setPlayVideo(videoPrev.data.results[5]);
+      setVideoPrev2(videoPrev.data.results[0]);
+      setPlayVideo(videoPrev.data.results[0]);
       setFanArt2(fanArt.data.hdmovielogo[0]);
     };
 

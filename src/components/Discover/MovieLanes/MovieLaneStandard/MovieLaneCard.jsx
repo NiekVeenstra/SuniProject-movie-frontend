@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
-const MovieLaneCard = () => {
-    return (
-        <div>
-            <h1>card</h1>
-        </div>
-    )
-}
+const MovieLaneCard = ({ backdropPath }) => {
+  return (
+    <div className="movieLaneCard">
+      <div className="movieLaneCard__movieImage">
+        <img className="movieLaneCard__img" src={backdropPath} alt="" />
+      </div>
+    </div>
+  );
+};
 
-export default MovieLaneCard
+export default MovieLaneCard;

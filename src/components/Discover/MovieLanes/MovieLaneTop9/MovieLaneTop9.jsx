@@ -64,21 +64,21 @@ const MovieLaneTop9 = () => {
   let width = useCurrentWidth();
 
   const horizontalScrollHandlerLeft = () => {
-    document.getElementById("movieLane").scrollLeft -= width / 2;
+    document.getElementById("movieLaneTop9").scrollLeft -= width / 2;
   };
   const horizontalScrollHandlerRight = () => {
-    document.getElementById("movieLane").scrollLeft += width / 2;
+    document.getElementById("movieLaneTop9").scrollLeft += width / 2;
   };
 
   return (
-    <div className="movieLane-outer">
+    <div className="movieLane-outer-Top9">
       <button
         onClick={horizontalScrollHandlerLeft}
-        className="movieLane-outer__button movieLane-outer__button-back"
+        className="movieLane-outer-Top9__button movieLane-outer-Top9__button-back"
       >
         <i class="fas fa-angle-left"></i>
       </button>
-      <div className="movieLane" id="movieLane">
+      <div className="movieLaneTop9" id="movieLaneTop9">
         {videoInfo.slice(0, 9).map((movie) => (
           <MovieLaneCardTop9
             nr={(n += 1)}
@@ -91,14 +91,12 @@ const MovieLaneTop9 = () => {
       </div>
       <button
         onClick={horizontalScrollHandlerRight}
-        className="movieLane-outer__button movieLane-outer__button-forth"
+        className="movieLane-outer-Top9__button movieLane-outer-Top9__button-forth"
       >
         <i class="fas fa-angle-right"></i>
       </button>
     </div>
   );
 };
-
-// backdrop={`https://image.tmdb.org/t/p/original/${backdrop}`}
 
 export default MovieLaneTop9;
