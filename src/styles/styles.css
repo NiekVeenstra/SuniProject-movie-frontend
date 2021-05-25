@@ -877,6 +877,7 @@ body {
 
 .movieLane-outer {
   width: 90%;
+  height: 35rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -886,7 +887,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 2.5rem;
+  margin-top: -5rem;
 }
 
 .movieLane-outer__button-back, .movieLane-outer__button-forth {
@@ -913,11 +914,11 @@ body {
 
 .movieLane {
   width: 100%;
+  padding: 3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow-x: scroll;
-  overflow-y: hidden;
   position: relative;
   scroll-behavior: smooth;
 }
@@ -930,10 +931,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
-}
-
-.movieLaneCard__movieImage {
   padding-left: 1rem;
 }
 
@@ -941,9 +949,15 @@ body {
   width: 30rem;
 }
 
+.movieLaneCard__bottomInfo {
+  width: 30rem;
+  height: 10rem;
+  background-color: green;
+}
+
 .movieLaneCard:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 @media only screen and (max-width: 700px) {

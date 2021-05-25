@@ -1,9 +1,10 @@
 .movieLane-outer {
   width: 90%;
+  height: 35rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2.5rem;
+  margin-top: -5rem;
   // border: solid blue 1px;
   &__button-back,
   &__button-forth {
@@ -23,12 +24,18 @@
 }
 .movieLane-inner {
   width: 95%;
+  // border: solid blue 1px;
 }
 .movieLane {
+  // border: solid rgb(0, 255, 21) 1px;
+
   width: 100%;
+  // height: 40rem;
+  // height: fit-content;
+  padding: 3rem 0;
   display: flex;
   overflow-x: scroll;
-  overflow-y: hidden;
+  // overflow-y: hidden;
   position: relative;
   scroll-behavior: smooth;
   &::-webkit-scrollbar {
@@ -37,16 +44,23 @@
 }
 .movieLaneCard {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  &__movieImage {
-    padding-left: 1rem;
-  }
+  padding-left: 1rem;
   &__img {
     width: 30rem;
   }
-  &:hover {
-    transform: scale(1.2);
+  &__bottomInfo {
+    width: 30rem;
+    height: 10rem;
+    background-color: green;
   }
+}
+
+.movieLaneCard:hover {
+  transform: scale(1.3);
 }
 
 @media only screen and (max-width: 700px) {

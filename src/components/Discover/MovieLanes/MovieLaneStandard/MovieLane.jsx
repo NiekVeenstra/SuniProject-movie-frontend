@@ -18,8 +18,7 @@ const MovieLane = ({ genreName, genre, idd }) => {
           `/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&${genre}&page=2`
         ),
       ]);
-      console.log(movies.data);
-      console.log(movies2.data);
+      // console.log(movies.data);
       // setBackdrop(movie.data.results[0].backdrop_path);
       setVideoInfo(movies.data.results);
       setVideoInfo2(movies2.data.results);
@@ -73,21 +72,24 @@ const MovieLane = ({ genreName, genre, idd }) => {
         <i class="fas fa-angle-left"></i>
       </button>
       <div className="movieLane-inner">
-      <h1 style={{ color: "white" }}>{genreName}</h1>
-      <div className="movieLane" id={`movieLane${idd}`}>
-        {videoInfo.slice(0, 20).map((movie) => (
-          <MovieLaneCard
-            backdropPath={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
-            name={movie.title}
-          />
-        ))}
-        {videoInfo2.slice(0, 20).map((movie) => (
-          <MovieLaneCard
-            backdropPath={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
-            name={movie.title}
-          />
-        ))}
-      </div>
+        <h1 style={{ color: "white" }}>{genreName}</h1>
+        <div className="movieLane" id={`movieLane${idd}`}>
+          {videoInfo.slice(0, 20).map((movie) => (
+            <MovieLaneCard
+              backdropPath={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
+              name={movie.title}
+              id={movie.id}
+              idd={idd}
+            />
+          ))}
+          {videoInfo2.slice(0, 20).map((movie) => (
+            <MovieLaneCard
+              backdropPath={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
+              name={movie.title}
+              id={movie.id}
+            />
+          ))}
+        </div>
       </div>
       <button
         onClick={horizontalScrollHandlerRight}
