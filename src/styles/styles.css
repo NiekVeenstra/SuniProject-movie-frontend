@@ -783,6 +783,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
 }
 
 .movieLaneTop9 .movieLaneCardTop9 .number {
