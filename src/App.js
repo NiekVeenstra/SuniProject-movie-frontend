@@ -11,21 +11,26 @@ import PlayVideo from "./components/Discover/PlayVideo";
 import HomePage from "./pages/HomePage";
 import { Context } from "./Context/Context";
 import MoviesPage from "./pages/MoviesPage";
+import PlayMovie from "./components/Discover/MovieLanes/MovieLaneStandard/PlayMovie";
 
 const App = withRouter(({ location }) => {
   const [moreInfo, setMoreInfo] = useState(false);
   const [playVideo, setPlayVideo] = useState("");
+  const [playMovie, setPlayMovie] = useState("");
   // const [videoInfoID, setVideoInfoID] = useState("000000");
-  // console.log(playVideo);
+  console.log(playMovie);
   return (
     <div>
-      <Context.Provider value={{ moreInfo, setMoreInfo, playVideo, setPlayVideo}}>
-        {location.pathname !== "/watch" && <Navbar />}
+      <Context.Provider value={{ moreInfo, setMoreInfo, playVideo, setPlayVideo, playMovie, setPlayMovie }}>
+        {location.pathname !== "/watch" && location.pathname !== "/watch-movie" && <Navbar />}
         <Route exact path="/" component={HomePage} />
         <Route exact path="/movies" component={MoviesPage} />
         <Route exact path="/blank" component={BlankPage} />
         <Route exact path="/watch" component={PlayVideo} />
-        {location.pathname !== "/watch" && location.pathname !== "/blank" && <Footer />}
+        <Route exact path="/watch-movie" component={PlayMovie} />
+        {location.pathname !== "/watch" &&
+          location.pathname !== "/blank" &&
+          location.pathname !== "/watch-movie" && <Footer />}
       </Context.Provider>
     </div>
   );
