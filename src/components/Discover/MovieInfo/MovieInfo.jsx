@@ -11,6 +11,7 @@ const MovieInfo = ({ videoInfo, videoInfoID2, fanArt2, videoPrev2 }) => {
   const [videoInfoGenres2, setVideoInfoGenres2] = useState([]);
   const [productionComp, setProductionComp] = useState([]);
   const [language, setLanguage] = useState([]);
+  
   useEffect(() => {
     const fetchData = async () => {
       const [Info2] = await Promise.all([

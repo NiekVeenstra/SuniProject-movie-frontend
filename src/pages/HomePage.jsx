@@ -1,11 +1,13 @@
 import React from "react";
 import DiscoverPreview from "../components/Discover/DiscoverPreview";
+import MovieInfoCard from "../components/Discover/MovieLanes/MovieLaneStandard/MovieInfoCard";
 import MovieLane from "../components/Discover/MovieLanes/MovieLaneStandard/MovieLane";
 import MovieLaneTop9 from "../components/Discover/MovieLanes/MovieLaneTop9/MovieLaneTop9";
 
 const HomePage = () => {
   return (
     <div className="home-page">
+      <MovieInfoCard/>
       <DiscoverPreview />
       <MovieLaneTop9 />
       <MovieLane

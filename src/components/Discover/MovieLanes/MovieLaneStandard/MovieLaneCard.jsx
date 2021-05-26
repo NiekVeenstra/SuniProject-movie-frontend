@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import theMovieDB from "../../../../apis/theMovieDB";
 import { Context } from "../../../../Context/Context";
 
-const MovieLaneCard = ({ backdropPath, id, idd }) => {
+const MovieLaneCard = ({ backdropPath, id }) => {
   const [videoInfo, setVideoInfo] = useState({});
   const [videoInfoGenres1, setVideoInfoGenres1] = useState([]);
   const [videoInfoGenres2, setVideoInfoGenres2] = useState([]);
@@ -13,6 +13,9 @@ const MovieLaneCard = ({ backdropPath, id, idd }) => {
   const [mute, setMute] = useState(true);
   const [preview, setPreview] = useState([]);
   const { setPlayMovie } = useContext(Context);
+  const { movieInfo, setMovieInfo } = useContext(Context);
+  const { movieInfoAbout, setMovieInfoAbout } = useContext(Context);
+  const { movieInfoVideo, setMovieInfoVideo } = useContext(Context);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,9 +31,11 @@ const MovieLaneCard = ({ backdropPath, id, idd }) => {
       setVideoInfoGenres2(Info.data.genres[1]);
       // setProductionComp(Info2.data.production_companies[0]);
       // setLanguage(Info2.data.spoken_languages[0]);
-      // console.log(preview.data);
+      // console.log(Info.data);
       setPreview(preview.data.results[0]);
       // setPlayMovie(preview.data.results[0])
+      setMovieInfoAbout(Info.data);
+      setMovieInfoVideo(preview.data);
     };
 
     fetchData();
@@ -89,7 +94,12 @@ const MovieLaneCard = ({ backdropPath, id, idd }) => {
             <button style={{ cursor: "pointer" }}>
               <i className="far fa-thumbs-down"></i>
             </button>
-            <button style={{ cursor: "pointer" }}>
+            <button
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                setMovieInfo(!movieInfo);
+              }}
+            >
               <i className="fas fa-chevron-down"></i>
             </button>
           </div>

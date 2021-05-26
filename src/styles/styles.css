@@ -943,6 +943,8 @@ body {
           align-items: center;
   cursor: pointer;
   margin-left: 1rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .movieLaneCard__img {
@@ -995,5 +997,19 @@ body {
   .movieLaneCard__img {
     width: 20rem;
   }
+}
+
+.movieInfoCard-outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+.movieInfoCard-hidden {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

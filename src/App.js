@@ -15,13 +15,31 @@ import PlayMovie from "./components/Discover/MovieLanes/MovieLaneStandard/PlayMo
 
 const App = withRouter(({ location }) => {
   const [moreInfo, setMoreInfo] = useState(false);
+  const [movieInfo, setMovieInfo] = useState(false);
   const [playVideo, setPlayVideo] = useState("");
   const [playMovie, setPlayMovie] = useState("");
+  const [movieInfoAbout, setMovieInfoAbout] = useState("");
+  const [movieInfoVideo, setMovieInfoVideo] = useState("");
   // const [videoInfoID, setVideoInfoID] = useState("000000");
-  console.log(playMovie);
+  // console.log(movieInfo);
   return (
     <div>
-      <Context.Provider value={{ moreInfo, setMoreInfo, playVideo, setPlayVideo, playMovie, setPlayMovie }}>
+      <Context.Provider
+        value={{
+          moreInfo,
+          setMoreInfo,
+          playVideo,
+          setPlayVideo,
+          playMovie,
+          setPlayMovie,
+          movieInfo,
+          setMovieInfo,
+          movieInfoAbout,
+          setMovieInfoAbout,
+          movieInfoVideo,
+          setMovieInfoVideo,
+        }}
+      >
         {location.pathname !== "/watch" && location.pathname !== "/watch-movie" && <Navbar />}
         <Route exact path="/" component={HomePage} />
         <Route exact path="/movies" component={MoviesPage} />
