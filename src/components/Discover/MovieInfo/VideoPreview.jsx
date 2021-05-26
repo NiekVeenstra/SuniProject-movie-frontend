@@ -32,7 +32,6 @@ const VideoPreview = ({ fanArt2, videoPrev2 }) => {
           <div className={mute ? "sound-img-on sound-img" : "sound-img-off sound-img"} />
         </button>
       </div>
-
     </div>
   );
 };

@@ -942,7 +942,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  padding-left: 1rem;
+  margin-left: 1rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .movieLaneCard__img {
@@ -951,8 +953,29 @@ body {
 
 .movieLaneCard__bottomInfo {
   width: 30rem;
-  height: 10rem;
-  background-color: green;
+  padding: 0.7rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #383838;
+}
+
+.movieLaneCard__bottomInfo button {
+  margin: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 20px;
+  border: black;
 }
 
 .movieLaneCard:hover {
@@ -974,5 +997,19 @@ body {
   .movieLaneCard__img {
     width: 20rem;
   }
+}
+
+.movieInfoCard-outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+.movieInfoCard-hidden {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */
