@@ -34,8 +34,6 @@ const MovieLaneCard = ({ backdropPath, id }) => {
       // console.log(Info.data);
       setPreview(preview.data.results[0]);
       // setPlayMovie(preview.data.results[0])
-      setMovieInfoAbout(Info.data);
-      setMovieInfoVideo(preview.data);
     };
 
     fetchData();
@@ -53,8 +51,18 @@ const MovieLaneCard = ({ backdropPath, id }) => {
     setHover2(false);
   };
 
+  const infoClickHandler = () => {
+    setMovieInfoAbout(videoInfo);
+    setMovieInfoVideo(preview);
+  };
+
   return (
-    <div className="movieLaneCard" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
+    <div
+      className="movieLaneCard"
+      onMouseEnter={mouseEnter}
+      onMouseLeave={mouseLeave}
+      onClick={infoClickHandler}
+    >
       <div className="movieLaneCard__movieImage">
         {hover ? (
           <ReactPlayer

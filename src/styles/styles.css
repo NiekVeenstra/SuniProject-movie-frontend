@@ -1007,9 +1007,178 @@ body {
   height: 100%;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.623);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.movieInfoCard-outer .movieInfoCard {
+  width: 80%;
+}
+
+.movieInfoCard-outer .movieInfoCard .preview {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%, black));
+  background-image: linear-gradient(transparent, black 90%);
+}
+
+.movieInfoCard-outer .movieInfoCard .preview__player {
+  z-index: -1;
+  position: absolute;
+  top: -6%;
+}
+
+.movieInfoCard-outer .movieInfoCard .preview__backdrop-img {
+  padding-top: 55%;
+  width: 100%;
+  z-index: -1;
+}
+
+.movieInfoCard-outer .movieInfoCard .preview__button-sound2 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5%;
+  right: 3%;
+  z-index: 4;
+  cursor: pointer;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(255, 255, 255, 0.527);
+}
+
+.movieInfoCard-outer .movieInfoCard .preview__button-sound2 .sound-img {
+  z-index: 3;
+  width: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.movieInfoCard-outer .movieInfoCard .preview__button-sound2 .sound-img-on {
+  background: url("https://i.postimg.cc/MKKfY7Xg/3643734-high-sound-speaker-voice-volume-113403.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movieInfoCard-outer .movieInfoCard .preview__button-sound2 .sound-img-off {
+  background: url("https://i.postimg.cc/nhXsyn4k/3643732-mute-sound-speaker-voice-volume-113439.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .movieInfoCard-hidden {
   display: none;
+}
+
+.movieInfoVideoPreview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.movieInfoVideoPreview__container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.movieInfoVideoPreview__player {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  max-height: 100vh;
+}
+
+.movieInfoVideoPreview__close-window {
+  right: 0.5rem;
+  position: absolute;
+  top: 0.5rem;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.705);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.movieInfoVideoPreview__controlePanel {
+  position: absolute;
+  width: 20rem;
+  bottom: 3%;
+  margin-left: 2.5%;
+}
+
+.movieInfoVideoPreview__title {
+  width: 100%;
+}
+
+.movieInfoVideoPreview__playButton {
+  width: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.movieInfoVideoPreview .far {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.602);
+}
+
+.movieInfoVideoPreview .far:hover {
+  color: #8ceb10;
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
