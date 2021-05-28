@@ -1,10 +1,10 @@
 .movieLane-outer {
   width: 90%;
+  height: 35rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2.5rem;
-  // border: solid blue 1px;
+  margin-top: -5rem;
   &__button-back,
   &__button-forth {
     height: 20rem;
@@ -26,9 +26,9 @@
 }
 .movieLane {
   width: 100%;
+  padding: 3rem 0;
   display: flex;
   overflow-x: scroll;
-  overflow-y: hidden;
   position: relative;
   scroll-behavior: smooth;
   &::-webkit-scrollbar {
@@ -37,16 +37,35 @@
 }
 .movieLaneCard {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  &__movieImage {
-    padding-left: 1rem;
-  }
+  margin-left: 1rem;
   &__img {
     width: 30rem;
   }
-  &:hover {
-    transform: scale(1.2);
+  &__bottomInfo {
+    width: 30rem;
+    padding: 0.7rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(56, 56, 56);
+    button {
+      margin: 0.5rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 20px;
+      border: black;
+    }
   }
+  transition: all 0.5s ease-in-out;
+}
+
+.movieLaneCard:hover {
+  transform: scale(1.3);
 }
 
 @media only screen and (max-width: 700px) {
@@ -65,5 +84,165 @@
     &__img {
       width: 20rem;
     }
+  }
+}
+
+.movieInfoCard-outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.623);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .movieInfoCard {
+    // border: solid red 1px;
+    width: 80%;
+    max-width: 100rem;
+    .preview {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 0;
+      height: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(transparent, rgb(0, 0, 0) 90%);
+      &__player {
+        z-index: -1;
+        position: absolute;
+        top: -6%;
+      }
+      &__backdrop-img {
+        padding-top: 55%;
+        width: 100%;
+        z-index: -1;
+      }
+      &__button-sound2 {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 19%;
+        right: 3%;
+        z-index: 4;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.527);
+        .sound-img {
+          z-index: 3;
+          width: auto;
+          height: 100%;
+          width: 100%;
+        }
+        .sound-img-on {
+          background: url("https://i.postimg.cc/MKKfY7Xg/3643734-high-sound-speaker-voice-volume-113403.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .sound-img-off {
+          background: url("https://i.postimg.cc/nhXsyn4k/3643732-mute-sound-speaker-voice-volume-113439.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+    .movieInfoVideoPreviewText{
+      // border: solid red 1px;
+      // background-color: grey;
+      background-image: linear-gradient(transparent, rgb(29, 29, 29) 5%);
+      margin-top: -10%;
+      padding: 5%;
+      // height: 30rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .movieInfo-left, .moveInfo-right{
+        width: 45%;
+      }
+      p{
+        font-size: 1.5rem;
+        color: white;
+      }
+    }
+  }
+}
+.movieInfoCard-hidden {
+  display: none;
+}
+.movieInfoVideoPreview {
+  // height: 50%;
+  // border: 1px solid orange;
+  // color: red;
+  display: flex;
+  align-items: center;
+  &__container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 0;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__player {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    max-height: 100vh;
+  }
+  &__close-window {
+    right: 0.5rem;
+    position: absolute;
+    top: 0.5rem;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.705);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  &__controlePanel {
+    // border: 1px solid blue;
+    position: absolute;
+    width: 20rem;
+    // height: 150px;
+    // height: 30%;
+    bottom: 15%;
+    margin-left: 2.5%;
+  }
+  &__title {
+    width: 100%;
+  }
+  &__playButton {
+    // border: 1px solid red;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    // height: 30%;
+    justify-content: space-around;
+  }
+  .far {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.602);
+    // border: 1px solid greenyellow;
+  }
+  .far:hover {
+    color: rgb(140, 235, 16);
+    cursor: pointer;
   }
 }

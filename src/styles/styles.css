@@ -443,11 +443,12 @@ body {
 }
 
 .movieInfo-container {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: auto;
-  z-index: 5;
+  height: 100%;
   top: 0;
+  left: 0;
+  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -877,6 +878,7 @@ body {
 
 .movieLane-outer {
   width: 90%;
+  height: 35rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -886,7 +888,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 2.5rem;
+  margin-top: -5rem;
 }
 
 .movieLane-outer__button-back, .movieLane-outer__button-forth {
@@ -913,11 +915,11 @@ body {
 
 .movieLane {
   width: 100%;
+  padding: 3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow-x: scroll;
-  overflow-y: hidden;
   position: relative;
   scroll-behavior: smooth;
 }
@@ -930,20 +932,56 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
-}
-
-.movieLaneCard__movieImage {
-  padding-left: 1rem;
+  margin-left: 1rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .movieLaneCard__img {
   width: 30rem;
 }
 
+.movieLaneCard__bottomInfo {
+  width: 30rem;
+  padding: 0.7rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #383838;
+}
+
+.movieLaneCard__bottomInfo button {
+  margin: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 20px;
+  border: black;
+}
+
 .movieLaneCard:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 @media only screen and (max-width: 700px) {
@@ -960,5 +998,213 @@ body {
   .movieLaneCard__img {
     width: 20rem;
   }
+}
+
+.movieInfoCard-outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.623);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.movieInfoCard-outer .movieInfoCard {
+  width: 80%;
+  max-width: 100rem;
+}
+
+.movieInfoCard-outer .movieInfoCard .preview {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%, black));
+  background-image: linear-gradient(transparent, black 90%);
+}
+
+.movieInfoCard-outer .movieInfoCard .preview__player {
+  z-index: -1;
+  position: absolute;
+  top: -6%;
+}
+
+.movieInfoCard-outer .movieInfoCard .preview__backdrop-img {
+  padding-top: 55%;
+  width: 100%;
+  z-index: -1;
+}
+
+.movieInfoCard-outer .movieInfoCard .preview__button-sound2 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 19%;
+  right: 3%;
+  z-index: 4;
+  cursor: pointer;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(255, 255, 255, 0.527);
+}
+
+.movieInfoCard-outer .movieInfoCard .preview__button-sound2 .sound-img {
+  z-index: 3;
+  width: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.movieInfoCard-outer .movieInfoCard .preview__button-sound2 .sound-img-on {
+  background: url("https://i.postimg.cc/MKKfY7Xg/3643734-high-sound-speaker-voice-volume-113403.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movieInfoCard-outer .movieInfoCard .preview__button-sound2 .sound-img-off {
+  background: url("https://i.postimg.cc/nhXsyn4k/3643732-mute-sound-speaker-voice-volume-113439.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movieInfoCard-outer .movieInfoCard .movieInfoVideoPreviewText {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(5%, #1d1d1d));
+  background-image: linear-gradient(transparent, #1d1d1d 5%);
+  margin-top: -10%;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.movieInfoCard-outer .movieInfoCard .movieInfoVideoPreviewText .movieInfo-left, .movieInfoCard-outer .movieInfoCard .movieInfoVideoPreviewText .moveInfo-right {
+  width: 45%;
+}
+
+.movieInfoCard-outer .movieInfoCard .movieInfoVideoPreviewText p {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.movieInfoCard-hidden {
+  display: none;
+}
+
+.movieInfoVideoPreview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.movieInfoVideoPreview__container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.movieInfoVideoPreview__player {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  max-height: 100vh;
+}
+
+.movieInfoVideoPreview__close-window {
+  right: 0.5rem;
+  position: absolute;
+  top: 0.5rem;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.705);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.movieInfoVideoPreview__controlePanel {
+  position: absolute;
+  width: 20rem;
+  bottom: 15%;
+  margin-left: 2.5%;
+}
+
+.movieInfoVideoPreview__title {
+  width: 100%;
+}
+
+.movieInfoVideoPreview__playButton {
+  width: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.movieInfoVideoPreview .far {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.602);
+}
+
+.movieInfoVideoPreview .far:hover {
+  color: #8ceb10;
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
