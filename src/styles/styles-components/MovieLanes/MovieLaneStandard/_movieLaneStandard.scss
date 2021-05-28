@@ -281,4 +281,9 @@
   .hideInfo{
     display: none;
   }
+  .movieInfoVideoPreview{
+    &__title{
+      width: 50%;
+    }
+  }
 }

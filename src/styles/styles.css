@@ -1257,5 +1257,8 @@ body {
   .hideInfo {
     display: none;
   }
+  .movieInfoVideoPreview__title {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

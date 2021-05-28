@@ -65,7 +65,7 @@ const MovieInfoCard = () => {
             <button className="videoPreview__close-window" onClick={() => setMovieInfo(!movieInfo)}>
               <strong>X</strong>
             </button>
-            <MovieInfoVideoPreviewPlayPanel fanArt2={fanArt2} preview={preview} />
+            <MovieInfoVideoPreviewPlayPanel fanArt2={fanArt2.data.hdmovielogo[0]} preview={preview} />
 
             <button className="preview__button-sound2" onClick={() => setMute(!mute)}>
               <div className={mute ? "sound-img-on sound-img" : "sound-img-off sound-img"} />
