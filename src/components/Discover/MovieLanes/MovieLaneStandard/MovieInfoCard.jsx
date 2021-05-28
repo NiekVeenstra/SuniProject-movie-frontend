@@ -43,7 +43,7 @@ const MovieInfoCard = () => {
       className={movieInfo ? "movieInfoCard-outer" : "movieInfoCard-hidden"}
       onClick={closeWindowHandler}
     >
-      <div className="movieInfoCard" onClick={(e) => e.stopPropagation()}>
+      <div className="movieInfoCard animation2" onClick={(e) => e.stopPropagation()}>
         {/*  */}
         <div className="videoPreview">
           <div className="videoPreview__container">

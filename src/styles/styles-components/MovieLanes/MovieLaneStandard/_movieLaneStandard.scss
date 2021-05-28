@@ -246,3 +246,21 @@
     cursor: pointer;
   }
 }
+
+.animation2 {
+  animation: sampleanimation2 0.5s forwards;
+}
+
+@keyframes sampleanimation2 {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    // width: 80%;
+    transform: scale(1);
+  }
+}
