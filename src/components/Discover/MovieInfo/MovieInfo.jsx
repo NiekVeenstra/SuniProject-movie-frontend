@@ -10,7 +10,7 @@ const MovieInfo = ({ videoInfo, videoInfoID2, fanArt2, videoPrev2 }) => {
   const [videoInfoGenres1, setVideoInfoGenres1] = useState([]);
   const [productionComp, setProductionComp] = useState([]);
   const [language, setLanguage] = useState([]);
-  
+
   useEffect(() => {
     const fetchData = async () => {
       const [Info2] = await Promise.all([
@@ -33,10 +33,13 @@ const MovieInfo = ({ videoInfo, videoInfoID2, fanArt2, videoPrev2 }) => {
   };
 
   return (
-    <div className="movieInfo-container" onClick={closeWindowHandler}>
+    <div
+      className={moreInfo ? "movieInfo-container" : "movieInfo-hide"}
+      onClick={closeWindowHandler}
+    >
       <div
         onClick={(e) => e.stopPropagation()}
-        className={moreInfo ? "movieInfo animation" : "movieInfo-hide"}
+        className="movieInfo animation"
       >
         <VideoPreview fanArt2={fanArt2} videoPrev2={videoPrev2} />
         <VideoPreviewText
