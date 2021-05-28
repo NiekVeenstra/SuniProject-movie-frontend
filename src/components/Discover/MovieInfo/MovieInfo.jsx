@@ -8,7 +8,6 @@ const MovieInfo = ({ videoInfo, videoInfoID2, fanArt2, videoPrev2 }) => {
   const { moreInfo, setMoreInfo } = useContext(Context);
   const [videoInfo2, setVideoInfo2] = useState({});
   const [videoInfoGenres1, setVideoInfoGenres1] = useState([]);
-  const [videoInfoGenres2, setVideoInfoGenres2] = useState([]);
   const [productionComp, setProductionComp] = useState([]);
   const [language, setLanguage] = useState([]);
   
@@ -21,8 +20,7 @@ const MovieInfo = ({ videoInfo, videoInfoID2, fanArt2, videoPrev2 }) => {
         theMovieDB.get(`/movie/${videoInfoID2.id}?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`),
       ]);
       setVideoInfo2(Info2.data);
-      setVideoInfoGenres1(Info2.data.genres[0]);
-      setVideoInfoGenres2(Info2.data.genres[1]);
+      setVideoInfoGenres1(Info2.data.genres);
       setProductionComp(Info2.data.production_companies[0]);
       setLanguage(Info2.data.spoken_languages[0]);
     };
@@ -45,7 +43,6 @@ const MovieInfo = ({ videoInfo, videoInfoID2, fanArt2, videoPrev2 }) => {
           videoInfo={videoInfo}
           videoInfo2={videoInfo2}
           videoInfoGenres1={videoInfoGenres1}
-          videoInfoGenres2={videoInfoGenres2}
           productionComp={productionComp}
           language={language}
         />

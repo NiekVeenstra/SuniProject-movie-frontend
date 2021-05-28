@@ -96,9 +96,134 @@
 
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.623);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   .movieInfoCard {
+    // border: solid red 1px;
+    width: 80%;
+    .preview {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 0;
+      height: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(transparent, rgb(0, 0, 0) 90%);
+      &__player {
+        z-index: -1;
+        position: absolute;
+        top: -6%;
+      }
+      &__backdrop-img {
+        padding-top: 55%;
+        width: 100%;
+        z-index: -1;
+      }
+      &__button-sound2 {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 5%;
+        right: 3%;
+        z-index: 4;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.527);
+        .sound-img {
+          z-index: 3;
+          width: auto;
+          height: 100%;
+          width: 100%;
+        }
+        .sound-img-on {
+          background: url("https://i.postimg.cc/MKKfY7Xg/3643734-high-sound-speaker-voice-volume-113403.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .sound-img-off {
+          background: url("https://i.postimg.cc/nhXsyn4k/3643732-mute-sound-speaker-voice-volume-113439.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
   }
 }
 .movieInfoCard-hidden {
   display: none;
+}
+.movieInfoVideoPreview {
+  // height: 50%;
+  // border: 1px solid orange;
+  // color: red;
+  display: flex;
+  align-items: center;
+  &__container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 0;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__player {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    max-height: 100vh;
+  }
+  &__close-window {
+    right: 0.5rem;
+    position: absolute;
+    top: 0.5rem;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.705);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  &__controlePanel {
+    // border: 1px solid blue;
+    position: absolute;
+    width: 20rem;
+    // height: 150px;
+    // height: 30%;
+    bottom: 3%;
+    margin-left: 2.5%;
+  }
+  &__title {
+    width: 100%;
+  }
+  &__playButton {
+    // border: 1px solid red;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    // height: 30%;
+    justify-content: space-around;
+  }
+  .far {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.602);
+    // border: 1px solid greenyellow;
+  }
+  .far:hover {
+    color: rgb(140, 235, 16);
+    cursor: pointer;
+  }
 }
