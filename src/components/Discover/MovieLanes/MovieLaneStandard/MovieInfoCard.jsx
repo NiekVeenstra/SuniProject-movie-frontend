@@ -9,7 +9,7 @@ const MovieInfoCard = () => {
   const { movieInfo, setMovieInfo } = useContext(Context);
   const { movieInfoAbout } = useContext(Context);
   const { movieInfoVideo } = useContext(Context);
-  const [fanArt2, setFanArt2] = useState({});
+  const [fanArt2, setFanArt2] = useState(false);
   const [mute, setMute] = useState(true);
   const [movieAllInfo, setMovieAllInfo] = useState(false);
 
@@ -65,7 +65,7 @@ const MovieInfoCard = () => {
             <button className="videoPreview__close-window" onClick={() => setMovieInfo(!movieInfo)}>
               <strong>X</strong>
             </button>
-            <MovieInfoVideoPreviewPlayPanel fanArt2={fanArt2.data.hdmovielogo[0]} preview={preview} />
+            <MovieInfoVideoPreviewPlayPanel fanArt2={fanArt2 ? fanArt2.data.hdmovielogo[0].url : "https://assets.fanart.tv/fanart/movies/34433/hdmovielogo/dragon-ball-z-broly---the-legendary-super-saiyan-5c474d7db8da4.png"} preview={preview} />
 
             <button className="preview__button-sound2" onClick={() => setMute(!mute)}>
               <div className={mute ? "sound-img-on sound-img" : "sound-img-off sound-img"} />

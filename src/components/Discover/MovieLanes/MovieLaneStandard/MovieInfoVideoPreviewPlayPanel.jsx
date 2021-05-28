@@ -6,7 +6,7 @@ const MovieInfoVideoPreviewPlayPanel = ({ fanArt2, preview }) => {
   const { setPlayMovie } = useContext(Context);
   return (
     <div className="movieInfoVideoPreview__controlePanel">
-      <img className="movieInfoVideoPreview__title" src={fanArt2.url} alt="" />
+      <img className="movieInfoVideoPreview__title" src={fanArt2} alt="" />
       <div className="movieInfoVideoPreview__playButton">
         <Link to="/watch-movie" >
         <button
