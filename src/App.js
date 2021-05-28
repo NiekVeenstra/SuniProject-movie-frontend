@@ -18,8 +18,8 @@ const App = withRouter(({ location }) => {
   const [movieInfo, setMovieInfo] = useState(false);
   const [playVideo, setPlayVideo] = useState("");
   const [playMovie, setPlayMovie] = useState("");
-  const [movieInfoAbout, setMovieInfoAbout] = useState("");
-  const [movieInfoVideo, setMovieInfoVideo] = useState("");
+  const [movieInfoAbout, setMovieInfoAbout] = useState(false);
+  const [movieInfoVideo, setMovieInfoVideo] = useState({});
   // const [videoInfoID, setVideoInfoID] = useState("000000");
   // console.log(movieInfo);
   return (

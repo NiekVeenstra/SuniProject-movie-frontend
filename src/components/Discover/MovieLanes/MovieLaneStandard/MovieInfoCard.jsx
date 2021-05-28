@@ -11,38 +11,25 @@ const MovieInfoCard = () => {
   const { movieInfoVideo } = useContext(Context);
   const [fanArt2, setFanArt2] = useState({});
   const [mute, setMute] = useState(true);
+  const [movieAllInfo, setMovieAllInfo] = useState(false);
 
   const [preview, setPreview] = useState([]);
-  // console.log(preview);
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const [movieFanArt, preview] = await Promise.all([
-  //       theMovieDB.get(
-  //         `http://webservice.fanart.tv/v3/movies/${movieInfoAbout.id}?api_key=00c655f5cf699862386184d892b7378f`
-  //       ),
-  //       theMovieDB.get(`/movie/${movieInfoAbout.id}/videos?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`),
-  //     ]);
-  //     setFanArt2(movieFanArt);
-  //     // console.log(movieFanArt.data.hdmovielogo[0]);
-  //     setPreview(preview.data.results[0]);
-  //     console.log(preview);
-  //   };
-
-  //   fetchData();
-  // }, []);
 
   useEffect(() => {
     const fetchData = async () => {
-      const [movieFanArt, preview] = await Promise.all([
+      const [movieFanArt, preview, allInfo] = await Promise.all([
         moviedb.get(
           `http://webservice.fanart.tv/v3/movies/${movieInfoAbout.id}?api_key=00c655f5cf699862386184d892b7378f`
         ),
         moviedb.get(
           `/movie/${movieInfoAbout.id}/videos?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`
         ),
+        moviedb.get(`/movie/${movieInfoAbout.id}?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`),
       ]);
       setFanArt2(movieFanArt);
       setPreview(preview.data.results[0]);
+
+      setMovieAllInfo(allInfo.data);
     };
 
     fetchData();
@@ -86,7 +73,7 @@ const MovieInfoCard = () => {
           </div>
         </div>
         {/*  */}
-        <MovieInfoVideoPreviewText/>
+        <MovieInfoVideoPreviewText movieAllInfo={movieAllInfo} />
       </div>
     </div>
   );

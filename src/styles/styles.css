@@ -443,11 +443,12 @@ body {
 }
 
 .movieInfo-container {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: auto;
-  z-index: 5;
+  height: 100%;
   top: 0;
+  left: 0;
+  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1024,6 +1025,7 @@ body {
 
 .movieInfoCard-outer .movieInfoCard {
   width: 80%;
+  max-width: 100rem;
 }
 
 .movieInfoCard-outer .movieInfoCard .preview {
@@ -1062,7 +1064,7 @@ body {
   height: 2.5rem;
   border-radius: 50%;
   position: absolute;
-  bottom: 5%;
+  bottom: 19%;
   right: 3%;
   z-index: 4;
   cursor: pointer;
@@ -1098,6 +1100,30 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.movieInfoCard-outer .movieInfoCard .movieInfoVideoPreviewText {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(5%, #1d1d1d));
+  background-image: linear-gradient(transparent, #1d1d1d 5%);
+  margin-top: -10%;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.movieInfoCard-outer .movieInfoCard .movieInfoVideoPreviewText .movieInfo-left, .movieInfoCard-outer .movieInfoCard .movieInfoVideoPreviewText .moveInfo-right {
+  width: 45%;
+}
+
+.movieInfoCard-outer .movieInfoCard .movieInfoVideoPreviewText p {
+  font-size: 1.5rem;
+  color: white;
 }
 
 .movieInfoCard-hidden {
@@ -1151,7 +1177,7 @@ body {
 .movieInfoVideoPreview__controlePanel {
   position: absolute;
   width: 20rem;
-  bottom: 3%;
+  bottom: 15%;
   margin-left: 2.5%;
 }
 
