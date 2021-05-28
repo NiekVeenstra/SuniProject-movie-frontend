@@ -12,7 +12,7 @@ const MovieInfoVideoPreviewText = ({ movieAllInfo }) => {
           {movieAllInfo.title}
         </p>
         <br/>
-        <p>
+        <p className="hideInfo">
           {movieAllInfo.overview}
         </p>
       </div>

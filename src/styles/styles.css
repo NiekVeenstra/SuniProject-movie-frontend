@@ -1117,7 +1117,8 @@ body {
       flex-wrap: wrap;
 }
 
-.movieInfoCard-outer .movieInfoCard .movieInfoVideoPreviewText .movieInfo-left, .movieInfoCard-outer .movieInfoCard .movieInfoVideoPreviewText .moveInfo-right {
+.movieInfoCard-outer .movieInfoCard .movieInfoVideoPreviewText .movieInfo-left,
+.movieInfoCard-outer .movieInfoCard .movieInfoVideoPreviewText .moveInfo-right {
   width: 45%;
 }
 
@@ -1240,6 +1241,21 @@ body {
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .movieInfoCard-outer .movieInfoCard {
+    width: 100%;
+  }
+  .movieInfoCard-outer .movieInfoCard .movieInfoVideoPreviewText {
+    padding: 10%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hideInfo {
+    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */
