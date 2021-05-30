@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Route } from "react-router-dom";
 import { withRouter } from "react-router";
 import Footer from "./components/Footer/Footer";
@@ -12,6 +12,7 @@ import HomePage from "./pages/HomePage";
 import { Context } from "./Context/Context";
 import MoviesPage from "./pages/MoviesPage";
 import PlayMovie from "./components/Discover/MovieLanes/MovieLaneStandard/PlayMovie";
+import SearchResult from "./components/searchResultPage/SearchResult";
 
 const App = withRouter(({ location }) => {
   const [moreInfo, setMoreInfo] = useState(false);
@@ -20,10 +21,12 @@ const App = withRouter(({ location }) => {
   const [playMovie, setPlayMovie] = useState("");
   const [movieInfoAbout, setMovieInfoAbout] = useState(false);
   const [movieInfoVideo, setMovieInfoVideo] = useState({});
-  // const [videoInfoID, setVideoInfoID] = useState("000000");
-  // console.log(movieInfo);
+  const [inputSearch, setInputSearch] = useState({});
+  const [inputSearchResultPage, setInputSearchResultPage] = useState(false);
+
   return (
     <div>
+
       <Context.Provider
         value={{
           moreInfo,
@@ -38,8 +41,13 @@ const App = withRouter(({ location }) => {
           setMovieInfoAbout,
           movieInfoVideo,
           setMovieInfoVideo,
+          inputSearch,
+          setInputSearch,
+          inputSearchResultPage,
+          setInputSearchResultPage,
         }}
       >
+        <SearchResult />
         {location.pathname !== "/watch" && location.pathname !== "/watch-movie" && <Navbar />}
         <Route exact path="/" component={HomePage} />
         <Route exact path="/movies" component={MoviesPage} />
